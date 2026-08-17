@@ -1,0 +1,59 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = (200, 300)
+    height = (0, 300)
+    origin = top-right
+    offset = (10, 10)
+    scale = 0
+    notification_limit = 5
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+    frame_width = 2
+    gap_size = 4
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    show_age_threshold = 60
+    show_indicators = yes
+    enable_recursive_icon_lookup = true
+    icon_position = left
+    min_icon_size = 24
+    max_icon_size = 64
+    corner_radius = 12
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+    background = "#0f1416"
+    foreground = "#dee3e6"
+    frame_color = "#88d0ec"
+    separator_color = "#8a9296"
+    highlight = "#88d0ec"
+
+[urgency_low]
+    timeout = 5
+    background = "#0f1416"
+    foreground = "#bfc8cc"
+    frame_color = "#8a9296"
+
+[urgency_normal]
+    timeout = 10
+    background = "#1b2023"
+    foreground = "#dee3e6"
+    frame_color = "#88d0ec"
+
+[urgency_critical]
+    timeout = 0
+    background = "#ffb4ab"
+    foreground = "#690005"
+    frame_color = "#ffb4ab"

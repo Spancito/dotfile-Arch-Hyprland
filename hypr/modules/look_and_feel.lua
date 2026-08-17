@@ -1,0 +1,104 @@
+--- Look-and-feel ---
+
+local colors = require("colors/colors")
+
+hl.config({
+    general = {
+        gaps_in  = 7,
+        gaps_out = 15,
+
+        border_size = 1,
+
+        col = {
+            active_border   = colors.primary,
+            inactive_border = colors.surface,
+        },
+
+        resize_on_border = true,
+        allow_tearing    = false,
+        layout           = "master",
+    },
+
+    decoration = {
+        rounding       = 15,
+        rounding_power = 2,
+
+        active_opacity   = 1,
+        inactive_opacity = 0.8,
+
+        shadow = {
+            enabled      = true,
+            range        = 12,
+            render_power = 2,
+            color        = 0xaa121212,
+        },
+
+        blur = {
+            enabled            = true,
+            size               = 10,
+            passes             = 2,
+            vibrancy           = 0.5,
+            vibrancy_darkness  = 0.2,
+        },
+    },
+
+    animations = {
+        enabled = true,
+    },
+})
+
+hl.curve("md3_decel", { type = "bezier", points = { {0.05, 0.7}, {0.1, 1} } })     
+hl.curve("easeOutCirc", { type = "bezier", points = { {0, 0.55}, {0.45, 1} } })    
+hl.curve("quick",        { type = "bezier", points = { {0.15, 0}, {0.1, 1} } })     
+
+hl.curve("snappySpring", { type = "spring", mass = 1, stiffness = 320, dampening = 30 })
+
+hl.animation({ leaf = "global",        enabled = true,  speed = 10,  bezier = "default" })
+
+hl.animation({ leaf = "windows",       enabled = true,  speed = 6,   spring = "snappySpring" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 6,   spring = "snappySpring", style = "popin 82%" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 5,   bezier = "quick",        style = "popin 82%" })
+
+hl.animation({ leaf = "fade",          enabled = true,  speed = 5,   bezier = "md3_decel" })
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 5,   bezier = "md3_decel" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 4,   bezier = "quick" })
+
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 5,   bezier = "md3_decel",    style = "slidefade 20%" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 5,   bezier = "md3_decel",    style = "slidefade 20%" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 4.5, bezier = "quick",        style = "slidefade 20%" })
+
+hl.animation({ leaf = "layers",        enabled = true,  speed = 5,   bezier = "easeOutCirc" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 5,   bezier = "easeOutCirc",  style = "fade" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 4,   bezier = "quick",        style = "fade" })
+hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 5,   bezier = "md3_decel" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 4,   bezier = "quick" })
+
+hl.animation({ leaf = "border",        enabled = true,  speed = 6,   bezier = "md3_decel" })
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,   bezier = "quick" })
+
+hl.config({
+    dwindle = {
+        preserve_split = true,
+    },
+})
+
+hl.config({
+    master = {
+        new_status = "master",
+    },
+})
+
+hl.config({
+    scrolling = {
+        fullscreen_on_one_column = true,
+    },
+})
+
+hl.config({
+    misc = {
+        force_default_wallpaper = 0,
+        disable_hyprland_logo   = false,
+        disable_splash_rendering = true,
+        vrr = 0,
+    },
+})

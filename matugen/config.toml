@@ -1,0 +1,21 @@
+[config]
+reload_apps = true
+
+[templates.hyprland]
+input_path = '~/.config/hypr/colors/matugen.lua'
+output_path = '~/.config/hypr/colors/colors.lua'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '~/.config/waybar/colors/matugen.css'
+output_path = '~/.config/waybar/colors/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar || waybar >/dev/null 2>&1 &'
+
+[templates.hyprland-conf]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors/matugen.conf'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunstrc'
+output_path = '~/.config/dunst/dunstrc'
+post_hook = 'bash -c "dunstctl reload 2>/dev/null || { killall -9 dunst 2>/dev/null; dunst & }"'
