@@ -2,7 +2,7 @@
 
 local terminal      = "kitty"
 local fileManager   = "thunar"
-local menu          = "rofi -show drun -theme ~/.local/share/rofi/themes/minimal.rasi"
+local menu          = "rofi -show drun -theme ~/.config/rofi/.local/share/rofi/themes/minimal.rasi"
 local mainMod       = "SUPER"
 
 
