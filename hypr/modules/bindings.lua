@@ -2,17 +2,18 @@
 
 local terminal      = "kitty"
 local fileManager   = "thunar"
-local menu          = "rofi -show drun -theme ~/.local/share/rofi/themes/minimal.rasi"
+local menu          = "rofi -show drun -theme $HOME/.config/rofi/.local/share/rofi/minimal.rasi"
 local mainMod       = "SUPER"
-
+local minecraft		= "prismlauncher"
+local coding		= "zeditor"
+local music 		= "zuno"
+local capturas		= "flameshot gui"
 
 hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D",         hl.dsp.exec_cmd("pkill rofi || " .. menu))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("walset"))
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
-hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("~/.config/hypr/scripts/wlogout.sh"))
 hl.bind(mainMod .. " + N",     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + M", 		hl.dsp.exec_cmd(minecraft))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close()) 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -23,6 +24,10 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("brave --app=https://gemini.google.com"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("brave --app=https://web.whatsapp.com"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("brave --app=https://crunchyroll.com/es/discover"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(music))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(coding))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capturas))
 
 -- flechas --
 hl.bind("MOD5 + W", hl.dsp.send_shortcut({mods = "", key = "Up",window = "activewindow",}), { repeating = true }) 

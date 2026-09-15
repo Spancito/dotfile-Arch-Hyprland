@@ -51,3 +51,9 @@ hl.layer_rule({
     blur     = true,
     animation = "popin 87%",
 })
+hl.window_rule({
+	name = "Capturas",
+	match = {class = "flameshot"},
+	float = true,
+	size = {"400", "200"},
+})

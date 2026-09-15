@@ -1,5 +1,4 @@
 --- Input module
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/
 
 hl.config({
     input = {
