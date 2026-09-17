@@ -14,6 +14,8 @@ hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D",         hl.dsp.exec_cmd("pkill rofi || " .. menu))
 hl.bind(mainMod .. " + N",     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + M", 		hl.dsp.exec_cmd(minecraft))
+hl.bind(mainMod .. " + Tab", hl.dsp.focus({workspace = "r+1"}))
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({workspace = "r-1"}))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close()) 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
