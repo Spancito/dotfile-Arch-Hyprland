@@ -8,6 +8,7 @@ local minecraft		= "prismlauncher"
 local coding		= "zeditor"
 local music 		= "zuno"
 local capturas		= "flameshot gui"
+local reinicioWallpaper	= "/home/spancito/.config/restart_wallpaper.sh &"
 
 hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
@@ -30,6 +31,7 @@ hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("brave --app=https://crunchyroll.com/
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(music))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(coding))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capturas))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(reinicioWallpaper))
 
 -- flechas --
 hl.bind("MOD5 + W", hl.dsp.send_shortcut({mods = "", key = "Up",window = "activewindow",}), { repeating = true }) 
