@@ -1,5 +1,3 @@
---- Look-and-feel ---
-
 local colors = require("colors/colors")
 
 hl.config({
@@ -7,10 +5,10 @@ hl.config({
         gaps_in  = 7,
         gaps_out = 15,
 
-        border_size = 1,
+        border_size = 2,
 
         col = {
-            active_border   = colors.primary,
+            active_border   = { colors = { colors.primary, colors.secondary, colors.tertiary }, angle = 45 },
             inactive_border = colors.surface,
         },
 

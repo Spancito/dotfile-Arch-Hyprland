@@ -3,7 +3,6 @@
 * {
     border: none;
     font-weight: 500;
-    border-radius: 0;
     font-family:
         "Adwaita Sans", "JetBrainsMono Nerd Font Propo", "Roboto", "Helvetica",
         "Arial", "sans-serif";
@@ -18,18 +17,22 @@ window#waybar {
 
 tooltip {
     background: @surface;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid alpha(@outline_variant, 0.6);
     border-radius: 12px;
 }
 
 tooltip label {
-    color: rgba(255, 255, 255, 0.9);
+    color: @on_surface;
 }
 
-.modules-left  { margin-left: 15px; }
-.modules-right { margin-right: 15px; }
+.modules-left {
+    margin-left: 15px;
+}
 
-/* Shared Pill */
+.modules-right {
+    margin-right: 15px;
+}
+
 #custom-launcher,
 #clock,
 #workspaces,
@@ -47,48 +50,146 @@ tooltip label {
 #memory,
 #idle-inhibitor,
 #custom-vpn {
-    background-color: alpha(@surface_container_high, 0.75);
-    border: 1px solid alpha(@outline_variant, 0.6);
+    background-color: alpha(@surface_container_high, 0.85);
+    border: 1px solid alpha(@outline_variant, 0.5);
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.15),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-    color: @on_surface_variant;
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
     margin-right: 10px;
     padding: 0px 10px;
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease;
+    transition: all 0.25s ease;
 }
 
-/* Hover States */
-#custom-launcher:hover,
-#clock:hover,
-#workspaces button:hover,
-#custom-notification:hover,
-#custom-media:hover,
-#custom-pacman:hover,
-#custom-weather:hover,
-#pulseaudio:hover,
+#custom-launcher {
+    color: @primary;
+    border-color: alpha(@primary, 0.4);
+}
+
+#clock {
+    color: @primary;
+    border-color: alpha(@primary, 0.35);
+}
+
+#custom-media {
+    color: @tertiary;
+    border-color: alpha(@tertiary, 0.35);
+}
+
+#custom-pacman {
+    color: @tertiary;
+    border-color: alpha(@tertiary, 0.35);
+}
+
+#custom-weather {
+    color: @secondary;
+    border-color: alpha(@secondary, 0.35);
+}
+
+#pulseaudio {
+    color: @primary;
+    border-color: alpha(@primary, 0.35);
+}
+
+#network {
+    color: @tertiary;
+    border-color: alpha(@tertiary, 0.35);
+}
+
+#custom-notification {
+    color: @secondary;
+    border-color: alpha(@secondary, 0.35);
+    transition: all 0.3s ease-in-out;
+}
+
+#battery {
+    color: @secondary;
+    border-color: alpha(@secondary, 0.35);
+}
+
+#cpu {
+    color: @tertiary;
+    border-color: alpha(@tertiary, 0.35);
+}
+
+#memory {
+    color: @secondary;
+    border-color: alpha(@secondary, 0.35);
+}
+
+#backlight {
+    color: @primary;
+    border-color: alpha(@primary, 0.35);
+}
+
+#tray {
+    color: @on_surface;
+}
+
+#power-profiles-daemon {
+    color: @secondary;
+    margin-right: 0;
+}
+
+#custom-launcher:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @primary;
+    box-shadow: 0 0 8px alpha(@primary, 0.4);
+}
+
+#clock:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @primary;
+    box-shadow: 0 0 8px alpha(@primary, 0.4);
+}
+
+#custom-media:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @tertiary;
+    box-shadow: 0 0 8px alpha(@tertiary, 0.4);
+}
+
+#custom-pacman:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @tertiary;
+    box-shadow: 0 0 8px alpha(@tertiary, 0.4);
+}
+
+#custom-weather:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @secondary;
+    box-shadow: 0 0 8px alpha(@secondary, 0.4);
+}
+
+#pulseaudio:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @primary;
+    box-shadow: 0 0 8px alpha(@primary, 0.4);
+}
+
+#network:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @tertiary;
+    box-shadow: 0 0 8px alpha(@tertiary, 0.4);
+}
+
+#custom-notification:hover {
+    background-color: alpha(@surface_container_highest, 0.95);
+    border-color: @secondary;
+    box-shadow: 0 0 8px alpha(@secondary, 0.4);
+}
+
 #battery:hover,
-#network:hover,
-#power-profiles-daemon:hover,
-#backlight:hover,
 #cpu:hover,
 #memory:hover,
 #idle-inhibitor:hover,
 #custom-vpn:hover {
-    background-color: alpha(@surface_container_highest, 0.85);
+    background-color: alpha(@surface_container_highest, 0.95);
     border-color: alpha(@outline, 0.7);
 }
 
-/* Module Tweaks */
-#power-profiles-daemon {
-    margin-right: 0;
-}
-
-/* Workspaces */
 #workspaces {
     padding: 4px 6px;
+    border-color: alpha(@secondary, 0.35);
 }
 
 #workspaces button {
@@ -96,37 +197,24 @@ tooltip label {
     margin: 0px 3px;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
-    color: alpha(@on_surface_variant, 0.7);
+    color: @secondary;
 }
 
 #workspaces button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: @secondary;
+    background-color: alpha(@surface_container_highest, 0.95);
+    color: @tertiary;
     min-width: 45px;
-    background-size: 400% 400%;
 }
 
 #workspaces button.active {
-    color: @surface;
-    background-color: @primary;
+    color: @on_primary;
+    background: linear-gradient(135deg, @primary, @tertiary);
     min-width: 50px;
-    border-radius: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px alpha(@primary, 0.4);
 }
 
 #workspaces button.urgent {
     background-color: @error;
     color: @surface;
-}
-
-
-/* Notification */
-#custom-notification {
-    transition: all 0.3s ease-in-out;
-}
-
-#workspaces, #workspaces button, 
-#clock, #battery, #cpu, #memory, #disk, 
-#tray, #pulseaudio, #network, #backlight, #custom-menu {
-    background-color: @surface_container_highest;
-    color: @on_surface;
 }
