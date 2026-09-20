@@ -1,44 +1,27 @@
-/**
- * @name midnight
- * @description a dark, customizable discord theme (Matugen Automated).
- * @author refact0r
- * @version 2.1.1
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/midnight-discord
- * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
-*/
-
-/* import theme modules */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 body {
-    /* font options */
     --font: 'figtree';
     --code-font: '';
     font-weight: 400;
 
-    /* sizes */
     --gap: 8px;
     --divider-thickness: 4px;
     --border-thickness: 0px;
 
-    /* animation/transition options */
     --animations: on;
     --list-item-transition: 0.2s ease;
     --dms-icon-svg-transition: 0.4s ease;
     --border-hover-transition: 0.2s ease;
 
-    /* top bar options */
     --top-bar-height: var(--gap);
     --top-bar-button-position: titlebar;
     --top-bar-title-position: off;
     --subtle-top-bar-title: off;
 
-    /* window controls */
     --custom-window-controls: on;
     --window-control-size: 14px;
 
-    /* dms button options */
     --custom-dms-icon: off;
     --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
     --dms-icon-svg-size: 90%;
@@ -49,30 +32,24 @@ body {
     --dms-background-image-size: cover;
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
 
-    /* background image options */
     --background-image: off;
     --background-image-url: url('');
 
-    /* transparency/blur options */
     --transparency-tweaks: true;
     --remove-bg-layer: true;
     --panel-blur: true;
     --blur-amount: 12px;
     --bg-floating: var(--bg-3);
 
-    /* chatbar options */
     --custom-chatbar: true;
     --chatbar-height: 47px;
 
-    /* other options */
     --small-user-panel: on;
 }
 
-/* color options */
 :root {
     --colors: on;
 
-    /* text colors */
     --text-0: var(--bg-4);
     --text-1: {{ colors.on_surface.dark.hex }};
     --text-2: {{ colors.on_surface_variant.dark.hex }};
@@ -80,11 +57,11 @@ body {
     --text-4: color-mix(in srgb, {{ colors.on_surface_variant.dark.hex }} 60%, transparent);
     --text-5: color-mix(in srgb, {{ colors.on_surface_variant.dark.hex }} 40%, transparent);
 
-    --bg-1: {{ colors.surface_container_highest.dark.hex }}; 
-    --bg-2: {{ colors.surface_container_high.dark.hex }};   
-    --bg-3: {{ colors.surface_container.dark.hex }};         
-    --bg-4: {{ colors.surface.dark.hex }};                   
-    
+    --bg-1: {{ colors.surface_container_highest.dark.hex }};
+    --bg-2: {{ colors.surface_container_high.dark.hex }};
+    --bg-3: {{ colors.surface_container.dark.hex }};
+    --bg-4: {{ colors.surface.dark.hex }};
+
     --hover: color-mix(in srgb, {{ colors.primary.dark.hex }} 10%, transparent);
     --active: color-mix(in srgb, {{ colors.primary.dark.hex }} 20%, transparent);
     --active-2: color-mix(in srgb, {{ colors.primary.dark.hex }} 30%, transparent);
@@ -117,8 +94,8 @@ body {
     --red-4: {{ base16.base08.dark.hex | lighten: -20.0 }};
     --red-5: {{ base16.base08.dark.hex | lighten: -30.0 }};
 
-    --green-1: {{ colors.source_color.dark.hex | lighten: 20.0 }}; 
-    --green-2: #40a258; 
+    --green-1: {{ colors.source_color.dark.hex | lighten: 20.0 }};
+    --green-2: #40a258;
     --green-3: color-mix(in srgb, var(--green-2) 80%, black);
     --green-4: color-mix(in srgb, var(--green-2) 60%, black);
     --green-5: color-mix(in srgb, var(--green-2) 40%, black);

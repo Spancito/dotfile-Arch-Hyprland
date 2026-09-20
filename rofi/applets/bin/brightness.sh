@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : Brightness
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Brightness Info
 backlight="$(printf "%.0f\n" `light -G`)"
 card="`light -L | grep 'backlight' | head -n1 | cut -d'/' -f3`"
 
@@ -23,7 +16,6 @@ elif [[ $backlight -ge 70 ]] && [[ $backlight -le 100 ]]; then
     level="Peak"
 fi
 
-# Theme Elements
 prompt="${backlight}%"
 mesg="Device: ${card}, Level: $level"
 
@@ -45,7 +37,6 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 	win_width='550px'
 fi
 
-# Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	option_1=" Increase"
@@ -59,7 +50,6 @@ else
 	option_4=""
 fi
 
-# Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "window {width: $win_width;}" \
 		-theme-str "listview {columns: $list_col; lines: $list_row;}" \
@@ -71,12 +61,10 @@ rofi_cmd() {
 		-theme ${theme}
 }
 
-# Pass variables to rofi dmenu
 run_rofi() {
 	echo -e "$option_1\n$option_2\n$option_3\n$option_4" | rofi_cmd
 }
 
-# Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		light -A 5
@@ -89,7 +77,6 @@ run_cmd() {
 	fi
 }
 
-# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
     $option_1)

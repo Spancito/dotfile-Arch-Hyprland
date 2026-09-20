@@ -1,4 +1,3 @@
-
 .theme-dark {
 	--accent-h:calc({{colors.primary.dark.hue}}/255*360);
 	--accent-s:calc({{colors.primary.dark.saturation}}/255*100%);
@@ -8,8 +7,8 @@
   --text-muted:{{colors.on_surface_variant.dark.hex}};
   --text-faint:{{colors.outline.dark.hex}};
 
-  --background-primary:{{colors.surface.dark.hex}}; /* editor and right ribbon */
-  --background-secondary:{{colors.surface_dim.dark.hex}}; /* left ribbon */ 
+  --background-primary:{{colors.surface.dark.hex}};
+  --background-secondary:{{colors.surface_dim.dark.hex}};
   --background-modifier-hover:{{colors.secondary_container.dark.hex}};
   --background-modifier-active-hover:{{colors.secondary.dark.hex}};
   --background-modifier-message:{{colors.surface_dim.dark.hex}};
@@ -45,8 +44,6 @@
 
   }
 
-
-/* add parts not accessible without specific selector?*/
 .theme-dark .sidebar-toggle-button.mod-left {
   color:{{colors.on_surface.dark.hex}};
   background:{{colors.surface.dark.hex}};
@@ -60,8 +57,6 @@
   background:{{colors.surface.dark.hex}};
 }
 
-
-/* copy for light mode */
 .theme-light {
 	--accent-h:calc({{colors.primary.light.hue}}/255*360);
 	--accent-s:calc({{colors.primary.light.saturation}}/255*100%);
@@ -71,8 +66,8 @@
   --text-muted:{{colors.on_surface_variant.light.hex}};
   --text-faint:{{colors.outline.light.hex}};
 
-  --background-primary:{{colors.surface.light.hex}}; /* editor and right ribbon */
-  --background-secondary:{{colors.surface_dim.light.hex}}; /* left ribbon */ 
+  --background-primary:{{colors.surface.light.hex}};
+  --background-secondary:{{colors.surface_dim.light.hex}};
   --background-modifier-hover:{{colors.secondary_container.light.hex}};
   --background-modifier-active-hover:{{colors.secondary.light.hex}};
   --background-modifier-message:{{colors.surface_dim.light.hex}};
@@ -108,8 +103,6 @@
 
   }
 
-
-/* add parts not accessible without specific selector?*/
 .theme-light .sidebar-toggle-button.mod-left {
   color:{{colors.on_surface.light.hex}};
   background:{{colors.surface.light.hex}};

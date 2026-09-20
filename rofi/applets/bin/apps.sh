@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : Favorite Applications
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Theme Elements
 prompt='Applications'
 mesg="Installed Packages : `pacman -Q | wc -l` (pacman)"
 
@@ -21,7 +14,6 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 	list_row='1'
 fi
 
-# CMDs (add your apps here)
 term_cmd='alacritty'
 file_cmd='thunar'
 text_cmd='geany'
@@ -29,7 +21,6 @@ web_cmd='firefox'
 music_cmd='alacritty -e ncmpcpp'
 setting_cmd='xfce4-settings-manager'
 
-# Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	option_1=" Terminal <span weight='light' size='small'><i>($term_cmd)</i></span>"
@@ -47,7 +38,6 @@ else
 	option_6=""
 fi
 
-# Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
 		-theme-str 'textbox-prompt-colon {str: "";}' \
@@ -58,12 +48,10 @@ rofi_cmd() {
 		-theme ${theme}
 }
 
-# Pass variables to rofi dmenu
 run_rofi() {
 	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi_cmd
 }
 
-# Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		${term_cmd}
@@ -80,7 +68,6 @@ run_cmd() {
 	fi
 }
 
-# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
     $option_1)

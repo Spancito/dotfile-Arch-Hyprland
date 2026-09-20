@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : Power Menu
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Theme Elements
 prompt="`hostname`"
 mesg="Uptime : `uptime -p | sed -e 's/up //g'`"
 
@@ -21,7 +14,6 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 	list_row='1'
 fi
 
-# Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	option_1=" Lock"
@@ -43,7 +35,6 @@ else
 	no=''
 fi
 
-# Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
 		-theme-str 'textbox-prompt-colon {str: "";}' \
@@ -54,12 +45,10 @@ rofi_cmd() {
 		-theme ${theme}
 }
 
-# Pass variables to rofi dmenu
 run_rofi() {
 	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi_cmd
 }
 
-# Confirmation CMD
 confirm_cmd() {
 	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
 		-theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
@@ -72,12 +61,10 @@ confirm_cmd() {
 		-theme ${theme}
 }
 
-# Ask for confirmation
 confirm_exit() {
 	echo -e "$yes\n$no" | confirm_cmd
 }
 
-# Confirm and execute
 confirm_run () {	
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
@@ -87,7 +74,6 @@ confirm_run () {
     fi	
 }
 
-# Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		betterlockscreen -l
@@ -104,7 +90,6 @@ run_cmd() {
 	fi
 }
 
-# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
     $option_1)

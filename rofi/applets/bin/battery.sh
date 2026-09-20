@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : Battery
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Battery Info
 battery="`acpi -b | cut -d',' -f1 | cut -d':' -f1`"
 status="`acpi -b | cut -d',' -f1 | cut -d':' -f2 | tr -d ' '`"
 percentage="`acpi -b | cut -d',' -f2 | tr -d ' ',\%`"
@@ -19,7 +12,6 @@ if [[ -z "$time" ]]; then
 	time=' Fully Charged'
 fi
 
-# Theme Elements
 prompt="$status"
 mesg="${battery}: ${percentage}%,${time}"
 
@@ -41,7 +33,6 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 	win_width='550px'
 fi
 
-# Charging Status
 active=""
 urgent=""
 if [[ $status = *"Charging"* ]]; then
@@ -55,7 +46,6 @@ else
     ICON_CHRG=""
 fi
 
-# Discharging
 if [[ $percentage -ge 5 ]] && [[ $percentage -le 19 ]]; then
     ICON_DISCHRG=""
 elif [[ $percentage -ge 20 ]] && [[ $percentage -le 39 ]]; then
@@ -68,7 +58,6 @@ elif [[ $percentage -ge 80 ]] && [[ $percentage -le 100 ]]; then
     ICON_DISCHRG=""
 fi
 
-# Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	option_1=" Remaining ${percentage}%"
@@ -82,7 +71,6 @@ else
 	option_4=""
 fi
 
-# Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "window {width: $win_width;}" \
 		-theme-str "listview {columns: $list_col; lines: $list_row;}" \
@@ -95,12 +83,10 @@ rofi_cmd() {
 		-theme ${theme}
 }
 
-# Pass variables to rofi dmenu
 run_rofi() {
 	echo -e "$option_1\n$option_2\n$option_3\n$option_4" | rofi_cmd
 }
 
-# Execute Command
 run_cmd() {
 	polkit_cmd="pkexec env PATH=$PATH DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY"
 	if [[ "$1" == '--opt1' ]]; then
@@ -114,7 +100,6 @@ run_cmd() {
 	fi
 }
 
-# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
     $option_1)

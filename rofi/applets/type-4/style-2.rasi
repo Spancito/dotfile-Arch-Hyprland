@@ -1,18 +1,7 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
     background:                  #2D1B14;
@@ -23,11 +12,6 @@ configuration {
     urgent:                      #934A1C;
 }
 
-/*
-USE_ICON=YES
-*/
-
-/*****----- Main Window -----*****/
 window {
     transparency:                "real";
     location:                    center;
@@ -45,7 +29,6 @@ window {
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     20px;
@@ -55,7 +38,6 @@ mainbox {
     children:                    [ "inputbar", "listview", "message" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     25px;
@@ -89,7 +71,6 @@ prompt {
     text-color:                  @background;
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      0px;
@@ -107,7 +88,6 @@ textbox {
     horizontal-align:            0.5;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     6;
@@ -121,7 +101,6 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     padding:                     30px 10px;

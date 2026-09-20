@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : Screenshot
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Theme Elements
 prompt='Screenshot'
 mesg="DIR: `xdg-user-dir PICTURES`/Screenshots"
 
@@ -31,7 +24,6 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 	win_width='670px'
 fi
 
-# Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	option_1=" Capture Desktop"
@@ -47,7 +39,6 @@ else
 	option_5=""
 fi
 
-# Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "window {width: $win_width;}" \
 		-theme-str "listview {columns: $list_col; lines: $list_row;}" \
@@ -59,12 +50,10 @@ rofi_cmd() {
 		-theme ${theme}
 }
 
-# Pass variables to rofi dmenu
 run_rofi() {
 	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5" | rofi_cmd
 }
 
-# Screenshot
 time=`date +%Y-%m-%d-%H-%M-%S`
 geometry=`xrandr | grep 'current' | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
 dir="`xdg-user-dir PICTURES`/Screenshots"
@@ -74,7 +63,6 @@ if [[ ! -d "$dir" ]]; then
 	mkdir -p "$dir"
 fi
 
-# notify and view screenshot
 notify_view() {
 	notify_cmd_shot='dunstify -u low --replace=699'
 	${notify_cmd_shot} "Copied to clipboard."
@@ -86,12 +74,10 @@ notify_view() {
 	fi
 }
 
-# Copy screenshot to clipboard
 copy_shot () {
 	tee "$file" | xclip -selection clipboard -t image/png
 }
 
-# countdown
 countdown () {
 	for sec in `seq $1 -1 1`; do
 		dunstify -t 1000 --replace=699 "Taking shot in : $sec"
@@ -99,7 +85,6 @@ countdown () {
 	done
 }
 
-# take shots
 shotnow () {
 	cd ${dir} && sleep 0.5 && maim -u -f png | copy_shot
 	notify_view
@@ -127,7 +112,6 @@ shotarea () {
 	notify_view
 }
 
-# Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		shotnow
@@ -142,7 +126,6 @@ run_cmd() {
 	fi
 }
 
-# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
     $option_1)

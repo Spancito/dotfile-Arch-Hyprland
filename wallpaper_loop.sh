@@ -2,7 +2,7 @@
 
 LOCKFILE="/tmp/wallpaper_loop.lock"
 DIR="$HOME/.config/wallpapers/Pictures/Wallpapers"
-INTERVAL=600
+INTERVAL=3600
 
 if [ -e "$LOCKFILE" ]; then
     OLD_PID=$(cat "$LOCKFILE" 2>/dev/null)
