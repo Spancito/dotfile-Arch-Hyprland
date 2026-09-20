@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
@@ -87,4 +86,3 @@ case ${chosen} in
 		run_cmd --opt5
         ;;
 esac
-

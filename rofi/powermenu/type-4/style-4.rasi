@@ -1,20 +1,9 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
 * {
-    /* Resolution : 1920x1080 */
+
     mainbox-spacing:             100px;
     mainbox-margin:              150px 400px;
     message-margin:              0px 350px;
@@ -28,7 +17,6 @@ configuration {
     textbox-font:                "Iosevka Nerd Font 16";
     element-text-font:           "feather Bold 64";
 
-    /* Gradients */
     gradient-1:                  linear-gradient(45, #1E98FD, #06FDA5);
     gradient-2:                  linear-gradient(0, #F971C6, #7A72EC);
     gradient-3:                  linear-gradient(70, #FFD56F, #FF6861);
@@ -49,7 +37,7 @@ configuration {
     gradient-18:                 linear-gradient(0, #667db6, #0082c8, #0082c8, #667db6);
     gradient-19:                 linear-gradient(0, #03001e, #7303c0, #ec38bc, #fdeff9);
     gradient-20:                 linear-gradient(0, #780206, #061161);
-    
+
     background-window:           var(gradient-19);
     background-normal:           white/10%;
     background-selected:         white/20%;
@@ -57,7 +45,6 @@ configuration {
     foreground-selected:         white;
 }
 
-/*****----- Main Window -----*****/
 window {
     transparency:                "real";
     location:                    center;
@@ -67,7 +54,6 @@ window {
     background-image:            var(background-window);
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     var(mainbox-spacing);
@@ -76,7 +62,6 @@ mainbox {
     children:                    [ "dummy", "inputbar", "listview", "message", "dummy" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     background-color:            transparent;
@@ -94,7 +79,6 @@ prompt {
     text-color:                  var(foreground-normal);
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      var(message-margin);
@@ -111,7 +95,6 @@ textbox {
     horizontal-align:            0.5;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     expand:                      false;
@@ -124,13 +107,12 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     var(listview-spacing);
     background-color:            transparent;
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     padding:                     var(element-padding);

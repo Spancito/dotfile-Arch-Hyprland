@@ -34,23 +34,23 @@
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
-    background = "#0a151a"
-    foreground = "#d9e4eb"
-    frame_color = "#67d3ff"
-    separator_color = "#879299"
-    highlight = "#67d3ff"
+    background = "#1f0f0c"
+    foreground = "#fcdbd4"
+    frame_color = "#ffb4a4"
+    separator_color = "#ad8880"
+    highlight = "#ffb4a4"
 
 [urgency_low]
     timeout = 5
-    background = "#0a151a"
-    foreground = "#bdc8cf"
-    frame_color = "#879299"
+    background = "#1f0f0c"
+    foreground = "#e6bdb4"
+    frame_color = "#ad8880"
 
 [urgency_normal]
     timeout = 10
-    background = "#172126"
-    foreground = "#d9e4eb"
-    frame_color = "#67d3ff"
+    background = "#2d1b17"
+    foreground = "#fcdbd4"
+    frame_color = "#ffb4a4"
 
 [urgency_critical]
     timeout = 0

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 dir="$HOME/.config/rofi/powermenu/type-3"
 theme='style-1'
 

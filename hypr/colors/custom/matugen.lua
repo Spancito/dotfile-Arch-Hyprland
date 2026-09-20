@@ -1,4 +1,3 @@
--- Generated Matugen files for Hyprland lua
 local M = {}
 
 M.image = "/home/fedox/Pictures/Wallpapers/monterey-dark.jpg"
@@ -102,6 +101,5 @@ M.tertiary_container = "rgba(643b47ff)"
 M.tertiary_fixed = "rgba(ffd9e2ff)"
 
 M.tertiary_fixed_dim = "rgba(f0b8c6ff)"
-
 
 return M

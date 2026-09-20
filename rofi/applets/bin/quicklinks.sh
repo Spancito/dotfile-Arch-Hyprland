@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 

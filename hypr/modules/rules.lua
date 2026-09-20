@@ -1,5 +1,3 @@
---- Windowrules ---
-
 local suppressMaximizeRule = hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },

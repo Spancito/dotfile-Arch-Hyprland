@@ -1,4 +1,3 @@
-
 require("colors.colors")
 require("modules/monitors")
 require("modules/autostart")
@@ -15,7 +14,3 @@ hl.env("GTK_THEME", "Adwaita:dark")
 hl.env("COLORSCHEME", "prefer-dark")
 hl.env("WEBKIT_DISABLE_COMPOSITING_MODE", 1)
 hl.env("WEBKIT_DISABLE_DMABUF_RENDERER", 1)
-
-
-
-

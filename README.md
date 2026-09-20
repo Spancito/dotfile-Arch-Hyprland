@@ -3,7 +3,6 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Tux Linux" width="120" height="120" />
 
   # Arch Linux + Hyprland
-  
 
   <p align="center">
     <a href="https://archlinux.org/">
@@ -15,7 +14,6 @@
     <a href="https://wayland.freedesktop.org/">
       <img src="https://img.shields.io/badge/Display_Server-Wayland-FF6600?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland" />
     </a>
-    
 
   ---
 

@@ -41,7 +41,6 @@
   --h5-color:{{colors.secondary.dark.hex}};
   --h6-color: color-mix(in srgb, {{colors.tertiary.dark.hex}}, {{colors.secondary.dark.hex}});
 
-
   }
 
 .theme-dark .sidebar-toggle-button.mod-left {
@@ -99,7 +98,6 @@
   --h4-color: color-mix(in srgb, {{colors.primary.light.hex}}, {{colors.secondary.light.hex}});
   --h5-color:{{colors.secondary.light.hex}};
   --h6-color: color-mix(in srgb, {{colors.tertiary.light.hex}}, {{colors.secondary.light.hex}});
-
 
   }
 

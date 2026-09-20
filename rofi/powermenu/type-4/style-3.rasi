@@ -1,20 +1,9 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
 * {
-    /* Resolution : 1920x1080 */
+
     mainbox-spacing:             50px;
     mainbox-margin:              50px;
     message-margin:              0px 300px;
@@ -35,7 +24,6 @@ configuration {
     foreground-selected:         white;
 }
 
-/*****----- Main Window -----*****/
 window {
     transparency:                "real";
     location:                    center;
@@ -47,7 +35,6 @@ window {
     background-color:            var(background-window);
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     var(mainbox-spacing);
@@ -56,7 +43,6 @@ mainbox {
     children:                    [ "dummy", "inputbar", "listview", "message", "dummy" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     background-color:            transparent;
@@ -74,7 +60,6 @@ prompt {
     text-color:                  var(foreground-normal);
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      var(message-margin);
@@ -91,7 +76,6 @@ textbox {
     horizontal-align:            0.5;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     expand:                      false;
@@ -104,13 +88,12 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     var(listview-spacing);
     background-color:            transparent;
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     padding:                     var(element-padding);

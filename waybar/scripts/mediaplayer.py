@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import gi
 gi.require_version("Playerctl", "2.0")
 from gi.repository import Playerctl, GLib
@@ -19,7 +18,6 @@ def signal_handler(sig, frame):
     sys.stdout.write("\n")
     sys.stdout.flush()
     sys.exit(0)
-
 
 class PlayerManager:
     def __init__(self, selected_player=None, excluded_player=[]):
@@ -157,7 +155,6 @@ def parse_arguments():
 
     return parser.parse_args()
 
-
 def main():
     arguments = parse_arguments()
 
@@ -177,7 +174,6 @@ def main():
 
     player = PlayerManager(arguments.player, arguments.exclude)
     player.run()
-
 
 if __name__ == "__main__":
     main()

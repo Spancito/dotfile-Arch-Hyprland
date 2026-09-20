@@ -1,4 +1,3 @@
-/*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
@@ -10,13 +9,11 @@ configuration {
 	window-format:              "{w} · {c} · {t}";
 }
 
-/*****----- Global Properties -----*****/
 @import                          "../shared/matugen.rasi"
 @import                          "../shared/fonts.rasi"
 
-/*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
+
     transparency:                "real";
     location:                    center;
     anchor:                      center;
@@ -25,14 +22,12 @@ window {
     x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
     enabled:                     true;
     border-radius:               10px;
     cursor:                      "default";
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     0px;
@@ -49,7 +44,6 @@ listbox {
     children:                    [ "message", "listview" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     10px;
@@ -86,7 +80,6 @@ dummy {
     background-color:            transparent;
 }
 
-/*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
     spacing:                     10px;
@@ -106,7 +99,6 @@ button selected {
     text-color:                  @background;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
@@ -125,7 +117,6 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     10px;
@@ -173,7 +164,6 @@ element-text {
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
 message {
     background-color:            transparent;
 }

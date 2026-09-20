@@ -95,7 +95,7 @@ listview {
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
-    
+
     spacing:                     20px;
     background-color:            transparent;
     cursor:                      "default";

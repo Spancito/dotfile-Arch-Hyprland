@@ -1,18 +1,7 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
     background:                  #231419;
@@ -23,11 +12,6 @@ configuration {
     urgent:                      #D08261;
 }
 
-/*
-USE_BUTTONS=YES
-*/
-
-/*****----- Main Window -----*****/
 window {
     transparency:                "real";
     location:                    center;
@@ -45,14 +29,12 @@ window {
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     background-color:            transparent;
     orientation:                 horizontal;
     children:                    [ "imagebox", "listview" ];
 }
 
-/*****----- Imagebox -----*****/
 imagebox {
     spacing:                     0px;
     padding:                     30px;
@@ -61,7 +43,6 @@ imagebox {
     children:                    [ "inputbar", "dummy", "message" ];
 }
 
-/*****----- User -----*****/
 userimage {
     margin:                      0px 0px;
     border:                      10px;
@@ -71,7 +52,6 @@ userimage {
     background-image:            url("~/.config/rofi/images/e.jpg", height);
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     padding:                     15px;
     border-radius:               10px;
@@ -89,7 +69,6 @@ prompt {
     text-color:                  inherit;
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      0px;
@@ -105,7 +84,6 @@ textbox {
     horizontal-align:            0.5;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     3;
@@ -117,14 +95,13 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     30px;
     margin:                      30px;
     background-color:            transparent;
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     padding:                     18px 10px;

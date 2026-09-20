@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 current=$(gsettings get org.gnome.desktop.interface color-scheme)
 
 if [[ "$current" == "'prefer-dark'" ]]; then
@@ -12,7 +11,6 @@ fi
 
 if pgrep -x "nautilus" > /dev/null; then
     dbus-send --session --dest=org.gnome.Nautilus --type=method_call /org/gnome/Nautilus org.freedesktop.Actions.Activate string:'reload' array:objpath:[] dict:string:variant:{} &>/dev/null
-    
 
     gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
     sleep 0.05

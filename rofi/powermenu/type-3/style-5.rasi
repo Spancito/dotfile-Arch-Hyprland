@@ -1,23 +1,12 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
-/*****----- Global Properties -----*****/
 @import                          "shared/colors.rasi"
 @import                          "shared/fonts.rasi"
 
 * {
-    /* Resolution : 1920x1080 */
+
     box-spacing:                 50px;
     box-margin:                  300px 250px;
     box-padding:                 50px;
@@ -31,9 +20,8 @@ configuration {
     element-font:                "feather 48";
 }
 
-/*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
+
     transparency:                "real";
     location:                    center;
     anchor:                      center;
@@ -42,7 +30,6 @@ window {
     x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
@@ -53,7 +40,6 @@ window {
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     var(box-spacing);
@@ -66,7 +52,6 @@ mainbox {
     children:                    [ "inputbar", "listview" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     var(inputbar-spacing);
@@ -101,7 +86,6 @@ prompt {
     text-color:                  @active;
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      var(message-margin);
@@ -130,7 +114,6 @@ error-message {
     text-color:                  @foreground;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     5;
@@ -142,7 +125,7 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     var(list-spacing);
     margin:                      0px;
     padding:                     0px;
@@ -154,7 +137,6 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     0px;
