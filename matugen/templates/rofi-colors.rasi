@@ -13,8 +13,10 @@
     outline: {{colors.outline.default.hex}};
 
     bg0: {{colors.surface.default.hex}};
+    bg0-transparent: {{colors.surface.default.hex}}B3;
     bg1: {{colors.surface_container_low.default.hex}};
     bg2: {{colors.surface_container.default.hex}};
+    bg2-transparent: {{colors.surface_container.default.hex}}B3;
     bg3: {{colors.surface_container_highest.default.hex}};
     bg4: {{colors.surface_bright.default.hex}};
     text: {{colors.on_surface.default.hex}};

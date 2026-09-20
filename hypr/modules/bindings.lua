@@ -1,6 +1,6 @@
 local terminal      = "kitty"
 local fileManager   = "thunar"
-local menu          = "rofi -show drun -theme $HOME/.config/rofi/.local/share/rofi/minimal.rasi"
+local menu          = "rofi -show drun -theme $HOME/.config/rofi/themes/blur.rasi"
 local mainMod       = "SUPER"
 local minecraft		= "prismlauncher"
 local coding		= "zeditor"

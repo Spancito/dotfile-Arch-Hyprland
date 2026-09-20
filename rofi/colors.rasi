@@ -1,0 +1,27 @@
+* {
+    primary: #ffb4a3;
+    secondary: #e7bdb4;
+    tertiary: #dbc58c;
+    error: #ffb4ab;
+
+    surface: #1a110f;
+    surface-container: #271d1b;
+    surface-container-highest: #3d3230;
+
+    on-surface: #f1dfdb;
+    on-surface-variant: #d8c2bd;
+    outline: #a08c88;
+
+    bg0: #1a110f;
+    bg0-transparent: #1a110fB3;
+    bg1: #231917;
+    bg2: #271d1b;
+    bg2-transparent: #271d1bB3;
+    bg3: #3d3230;
+    bg4: #423734;
+    text: #f1dfdb;
+    red: #ffb4ab;
+    green: #dbc58c;
+    blue: #ffb4a3;
+    grey1: #d8c2bd;
+}

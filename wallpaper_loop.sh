@@ -50,14 +50,14 @@ while true; do
             scheme=$(get_scheme_type "$archivo")
             matugen image -t "$scheme" "$archivo"
             pkill -x swaybg
-            swaybg -i "$archivo" -m fill >/dev/null 2>&1 &
+            swaybg -i "$archivo" -m stretch >/dev/null 2>&1 &
         elif [ "$extension" = "mp4" ] || [ "$extension" = "mkv" ] || [ "$extension" = "webm" ]; then
             pkill -x swaybg
             ffmpeg -y -v error -ss 00:00:02 -i "$archivo" -vframes 1 -update 1 /tmp/current_wallpaper.jpg
             scheme=$(get_scheme_type "/tmp/current_wallpaper.jpg")
             matugen image -t "$scheme" /tmp/current_wallpaper.jpg
             pkill -x mpvpaper
-            mpvpaper -o "no-audio loop-file=inf" "*" "$archivo" >/dev/null 2>&1 &
+            mpvpaper -o "no-audio loop-file=inf --keepaspect=no" "*" "$archivo" >/dev/null 2>&1 &
         fi
     fi
 

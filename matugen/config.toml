@@ -20,3 +20,11 @@ output_path = '~/.config/hypr/colors/matugen.conf'
 input_path = '~/.config/matugen/templates/dunstrc'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'bash -c "dunstctl reload 2>/dev/null || { killall -9 dunst 2>/dev/null; dunst & }"'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/midnight.theme.css'
+output_path = '~/.config/vesktop/themes/blur.theme.css'

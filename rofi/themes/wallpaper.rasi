@@ -1,0 +1,131 @@
+@import "../colors.rasi"
+
+configuration {
+    show-icons:                 true;
+    font:                       "SF Pro Text 12";
+}
+
+* {
+    background-color:           transparent;
+    text-color:                 @text;
+    margin:                     0px;
+    padding:                    0px;
+    spacing:                    0px;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    y-offset:                   0px;
+    width:                      750px;
+    border:                     2px solid;
+    border-radius:              15px;
+    border-color:               @primary;
+    background-color:           @bg0-transparent;
+    cursor:                     "default";
+}
+
+mainbox {
+    enabled:                    true;
+    spacing:                    15px;
+    padding:                    20px;
+    background-color:           transparent;
+    children:                   [ "listview", "message" ];
+}
+
+listview {
+    enabled:                    true;
+    columns:                    4;
+    lines:                      2;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               false;
+    fixed-columns:              true;
+    spacing:                    15px;
+    margin:                     0px;
+    padding:                    0px;
+    border:                     0px solid;
+    border-radius:              0px;
+    background-color:           transparent;
+    text-color:                 @text;
+    cursor:                     "default";
+}
+
+element {
+    enabled:                    true;
+    orientation:                vertical;
+    spacing:                    10px;
+    padding:                    10px;
+    border:                     0px solid;
+    border-radius:              12px;
+    background-color:           transparent;
+    text-color:                 @text;
+    cursor:                     pointer;
+}
+
+element normal.normal {
+    background-color:           transparent;
+    text-color:                 @text;
+}
+
+element normal.active {
+    background-color:           transparent;
+    text-color:                 @primary;
+}
+
+element selected.normal {
+    background-color:           @primary;
+    text-color:                 @bg0;
+}
+
+element selected.active {
+    background-color:           @primary;
+    text-color:                 @bg0;
+}
+
+element alternate.normal {
+    background-color:           transparent;
+    text-color:                 @text;
+}
+
+element alternate.active {
+    background-color:           transparent;
+    text-color:                 @primary;
+}
+
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       120px;
+    cursor:                     inherit;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    highlight:                  inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
+}
+
+message {
+    enabled:                    true;
+    margin:                     0px;
+    padding:                    0px;
+    border:                     0px solid;
+    border-radius:              0px;
+    background-color:           transparent;
+}
+
+error-message {
+    padding:                    20px;
+    border:                     0px solid;
+    border-radius:              15px;
+    background-color:           @bg0;
+    text-color:                 @text;
+}
