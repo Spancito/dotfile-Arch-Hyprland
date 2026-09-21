@@ -1,10 +1,7 @@
-# 1. Ignorar todo en .config
 *
 
-# 2. Permitir este archivo
 !.gitignore
 
-# 3. Lista blanca de carpetas y su contenido
 !dunst/
 !dunst/**
 !fastfetch/
@@ -23,3 +20,4 @@
 !waybar/**
 !wallpaper_loop.sh
 !README.md
+!select_wallpaper.sh
