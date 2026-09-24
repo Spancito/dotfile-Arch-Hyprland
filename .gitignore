@@ -16,6 +16,8 @@
 !micro/**
 !rofi/
 !rofi/**
+!temaVesktop/
+!temaVesktop/**
 !wallpapers/
 !wallpapers/**
 !waybar/

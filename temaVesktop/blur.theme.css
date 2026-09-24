@@ -1,0 +1,120 @@
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    --font: 'figtree';
+    --code-font: '';
+    font-weight: 400;
+
+    --gap: 8px;
+    --divider-thickness: 4px;
+    --border-thickness: 0px;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: true;
+    --remove-bg-layer: true;
+    --panel-blur: true;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --custom-chatbar: true;
+    --chatbar-height: 47px;
+
+    --small-user-panel: on;
+}
+
+:root {
+    --colors: on;
+
+    --text-0: var(--bg-4);
+    --text-1: #e9e1e0;
+    --text-2: #d4c3c1;
+    --text-3: color-mix(in srgb, #d4c3c1 80%, transparent);
+    --text-4: color-mix(in srgb, #d4c3c1 60%, transparent);
+    --text-5: color-mix(in srgb, #d4c3c1 40%, transparent);
+
+    --bg-1: #383433;
+    --bg-2: #2d2929;
+    --bg-3: #221f1e;
+    --bg-4: #161312;
+
+    --hover: color-mix(in srgb, #e7bcb9 10%, transparent);
+    --active: color-mix(in srgb, #e7bcb9 20%, transparent);
+    --active-2: color-mix(in srgb, #e7bcb9 30%, transparent);
+    --message-hover: rgba(0, 0, 0, 0.1);
+
+    --accent-1: var(--blue-1);
+    --accent-2: var(--blue-2);
+    --accent-3: var(--blue-3);
+    --accent-4: var(--blue-4);
+    --accent-5: var(--blue-5);
+    --accent-new: var(--accent-2);
+    --mention: linear-gradient(to right, color-mix(in srgb, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in srgb, var(--accent-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in srgb, var(--text-3), transparent 95%) 40%, transparent);
+
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: rgba(255, 255, 255, 0.1);
+
+    --red-1: #282d28;
+    --red-2: #101210;
+    --red-3: #000000;
+    --red-4: #000000;
+    --red-5: #000000;
+
+    --green-1: #e9dbda;
+    --green-2: #40a258;
+    --green-3: color-mix(in srgb, var(--green-2) 80%, black);
+    --green-4: color-mix(in srgb, var(--green-2) 60%, black);
+    --green-5: color-mix(in srgb, var(--green-2) 40%, black);
+
+    --blue-1: #e7bcb9;
+    --blue-2: #5d3f3d;
+    --blue-3: color-mix(in srgb, #5d3f3d 80%, black);
+    --blue-4: color-mix(in srgb, #5d3f3d 60%, black);
+    --blue-5: color-mix(in srgb, #5d3f3d 40%, black);
+
+    --yellow-1: #cde9dc;
+    --yellow-2: #b2ccc1;
+    --yellow-3: #b2ccc1;
+    --yellow-4: color-mix(in srgb, #b2ccc1 80%, black);
+    --yellow-5: color-mix(in srgb, #b2ccc1 60%, black);
+
+    --purple-1: #d8c1bf;
+    --purple-2: #534342;
+    --purple-3: color-mix(in srgb, #534342 80%, black);
+    --purple-4: color-mix(in srgb, #534342 60%, black);
+    --purple-5: color-mix(in srgb, #534342 40%, black);
+}
