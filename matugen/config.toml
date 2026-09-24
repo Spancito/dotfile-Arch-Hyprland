@@ -28,3 +28,7 @@ output_path = '~/.config/rofi/colors.rasi'
 [templates.vesktop]
 input_path = '~/.config/matugen/templates/midnight.theme.css'
 output_path = '~/.config/vesktop/themes/blur.theme.css'
+
+[templates.micro]
+input_path = '~/.config/matugen/templates/micro-colors.micro'
+output_path = '~/.config/micro/colorschemes/matugen.micro'

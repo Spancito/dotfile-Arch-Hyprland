@@ -12,6 +12,8 @@
 !kitty/**
 !matugen/
 !matugen/**
+!micro/
+!micro/**
 !rofi/
 !rofi/**
 !wallpapers/
