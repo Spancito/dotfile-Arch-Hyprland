@@ -8,6 +8,7 @@
 !fastfetch/**
 !hypr/
 !hypr/**
+!install.sh
 !kitty/
 !kitty/**
 !matugen/
