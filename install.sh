@@ -15,7 +15,7 @@ NATIVE_PKGS=(
     gst-plugins-ugly hyprland kitty lutris man-pages
     matugen meld noto-fonts obs-studio opencode pipewire-jack plocate
     prismlauncher pv python qt5-wayland qt6-wayland rofi
-    slurp snapper steam swaybg thunar ttf-meslo-nerd unrar upower vim
+    slurp snapper swaybg thunar ttf-meslo-nerd unrar upower vim
     vlc-plugins-all waybar wireplumber wl-clipboard wtype xdg-desktop-portal-hyprland
     zed
 )
@@ -32,6 +32,7 @@ AUR_PKGS=(
     mpvpaper
     proton-cachyos-native
     shelly
+	steam
     vesktop
     zuno
 )
