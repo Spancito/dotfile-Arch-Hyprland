@@ -8,7 +8,6 @@ local music 		= "zuno"
 local capturas		= "flameshot gui"
 local wallpaperAleatorio	= "$HOME/.config/restart_wallpaper.sh &"
 local selectWallpaper = "$HOME/.config/select_wallpaper.sh &"
-local token 		= "wtype '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'"
 
 hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
@@ -33,7 +32,6 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(coding))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capturas))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(wallpaperAleatorio))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(selectWallpaper))
-hl.bind(mainMod .. " + ALT + E", hl.dsp.exec_cmd(token))
 
 hl.bind("MOD5 + W", hl.dsp.send_shortcut({mods = "", key = "Up",window = "activewindow",}), { repeating = true }) 
 hl.bind("MOD5 + A", hl.dsp.send_shortcut({mods = "", key = "Left", window = "activewindow",}), { repeating = true })
