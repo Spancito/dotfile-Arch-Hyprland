@@ -3,7 +3,7 @@
   "logo": {
     "type": "builtin",
     "source": "arch",
-    "color": {"1": "#c3c0ff", "2": "#c7c4dd"},
+    "color": {"1": "{{colors.primary.default.hex}}", "2": "{{colors.secondary.default.hex}}"},
     "padding": {
       "top": 1,
       "left": 2,
@@ -13,9 +13,9 @@
   "display": {
     "separator": " 󰁕 ",
     "color": {
-      "keys": "#c3c0ff",
-      "title": "#c3c0ff",
-      "separator": "#eab9d1"
+      "keys": "{{colors.primary.default.hex}}",
+      "title": "{{colors.primary.default.hex}}",
+      "separator": "{{colors.tertiary.default.hex}}"
     }
   },
   "modules": [
@@ -23,73 +23,73 @@
     {
       "type": "title",
       "color": {
-        "user": "#c3c0ff",
-        "at": "#928f9a",
-        "host": "#c7c4dd"
+        "user": "{{colors.primary.default.hex}}",
+        "at": "{{colors.outline.default.hex}}",
+        "host": "{{colors.secondary.default.hex}}"
       }
     },
     {
       "type": "custom",
       "format": "────────────────────────────────────────",
-      "outputColor": "#47464f"
+      "outputColor": "{{colors.surface_variant.default.hex}}"
     },
     "break",
     {
       "type": "os",
       "key": "╭─  OS",
-      "keyColor": "#c3c0ff"
+      "keyColor": "{{colors.primary.default.hex}}"
     },
     {
       "type": "host",
       "key": "├─ 󰌢 PC",
-      "keyColor": "#c3c0ff"
+      "keyColor": "{{colors.primary.default.hex}}"
     },
     {
       "type": "kernel",
       "key": "├─  Kernel",
-      "keyColor": "#c3c0ff"
+      "keyColor": "{{colors.primary.default.hex}}"
     },
     {
       "type": "uptime",
       "key": "╰─ 󰅐 Uptime",
-      "keyColor": "#c3c0ff"
+      "keyColor": "{{colors.primary.default.hex}}"
     },
     "break",
     {
       "type": "packages",
       "key": "╭─ 󰏖 Packages",
-      "keyColor": "#c7c4dd"
+      "keyColor": "{{colors.secondary.default.hex}}"
     },
     {
       "type": "shell",
       "key": "├─  Shell",
-      "keyColor": "#c7c4dd"
+      "keyColor": "{{colors.secondary.default.hex}}"
     },
     {
       "type": "wm",
       "key": "├─  WM",
-      "keyColor": "#c7c4dd"
+      "keyColor": "{{colors.secondary.default.hex}}"
     },
     {
       "type": "terminal",
       "key": "╰─  Terminal",
-      "keyColor": "#c7c4dd"
+      "keyColor": "{{colors.secondary.default.hex}}"
     },
     "break",
     {
       "type": "cpu",
       "key": "╭─  CPU",
-      "keyColor": "#eab9d1"
+      "keyColor": "{{colors.tertiary.default.hex}}"
     },
     {
       "type": "gpu",
       "key": "├─ 󰢮 GPU",
-      "keyColor": "#eab9d1"
+      "keyColor": "{{colors.tertiary.default.hex}}"
     },
     {
       "type": "memory",
       "key": "╰─  Memory",
-      "keyColor": "#eab9d1"
+      "keyColor": "{{colors.tertiary.default.hex}}"
     },
     "break"
   ]

@@ -17,8 +17,6 @@
 !micro/**
 !rofi/
 !rofi/**
-!temaVesktop/
-!temaVesktop/**
 !wallpapers/
 !wallpapers/**
 !waybar/
@@ -26,3 +24,7 @@
 !wallpaper_loop.sh
 !README.md
 !select_wallpaper.sh
+!temasVarios/
+!temasVarios/**
+!Afterglow-Cursors-src/
+!Afterglow-Cursors-src/**

@@ -7,9 +7,9 @@
         "terminal.background": "#00000000",
         "titleBar.activeBackground": "#00000000",
         "titleBar.inactiveBackground": "#00000000",
-        "window.activeBorder": "{{colors.primary.default.hex}}",
+        "window.activeBorder": "#c3c0ff",
         "editorGroupHeader.tabsBackground": "#00000000",
-        "tab.activeBackground": "{{colors.surface_container_low.default.hex}}60",
+        "tab.activeBackground": "#1b1b2160",
         "tab.inactiveBackground": "#00000000"
     },
     "editor.tokenColorCustomizations": {
@@ -17,35 +17,35 @@
             {
                 "scope": ["keyword", "storage", "variable.language"],
                 "settings": {
-                    "foreground": "{{colors.primary.default.hex}}",
+                    "foreground": "#c3c0ff",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["entity.name.function", "support.function"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex}}",
+                    "foreground": "#c7c4dd",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["string", "markup.inline.raw"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex}}",
+                    "foreground": "#eab9d1",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["variable", "support.variable"],
                 "settings": {
-                    "foreground": "{{colors.on_surface.default.hex}}",
+                    "foreground": "#e5e1e9",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["comment", "punctuation.definition.comment"],
                 "settings": {
-                    "foreground": "{{colors.outline.default.hex}}"
+                    "foreground": "#928f9a"
                 }
             }
         ]

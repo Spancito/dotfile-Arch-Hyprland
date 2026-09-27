@@ -1,0 +1,39 @@
+=== ÍNDICE DE TEMAS DINÁMICOS CREADOS (MATUGEN) ===
+
+1. Rofi (Lanzador de aplicaciones):
+   - Archivo: rofi-colors.rasi (Plantilla base para Matugen)
+   - Archivo generado (normalmente): ~/.config/rofi/themes/blur.rasi
+
+2. Vesktop / Discord (Cliente de chat):
+   - Archivo: vesktop-colors.css (Plantilla base)
+   - Archivo generado (normalmente): ~/.config/vesktop/themes/matugen.css
+
+3. Zuno (Reproductor YouTube Music):
+   - Archivo: blur.css (Plantilla base)
+   - Archivo generado (normalmente): ~/.config/zuno/blur.css
+
+4. Micro (Editor de texto de terminal):
+   - Archivo: micro-colors.micro
+   - Archivo generado (normalmente): ~/.config/micro/colorschemes/matugen.micro
+
+5. Zed (Editor de código gui):
+   - Archivo: zed-colors.json
+   - Archivo generado (normalmente): ~/.config/zed/themes/matugen.json
+
+6. Code OSS / VSCode (Editor de código):
+   - Archivo: vscode-colors.json (Plantilla)
+   - Archivo: update_vscode_theme.py (Script integrador para settings.json)
+
+7. Thunar / Aplicaciones GTK (Explorador de archivos):
+   - Archivo: gtk.css (Plantilla que da transparencia y color de selección)
+   - Archivo generado (normalmente): ~/.config/gtk-3.0/gtk.css
+   
+8. Íconos de Carpetas (Papirus):
+   - Archivo: papirus_color.sh (Plantilla que extrae el color HEX)
+   - Archivo: update_papirus.py (Script que recolorea los SVG locales)
+
+9. Cursor Dinámico (Afterglow):
+   - Archivo: generate_hyprcursor.py (Script maestro que compila SVG a Hyprcursor y Xcursor al vuelo)
+
+10. Fastfetch (Info del sistema):
+   - Archivo: fastfetch.jsonc (Plantilla con diseño de bloques estéticos y colores dinámicos)

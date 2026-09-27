@@ -32,3 +32,30 @@ output_path = '~/.config/vesktop/themes/blur.theme.css'
 [templates.micro]
 input_path = '~/.config/matugen/templates/micro-colors.micro'
 output_path = '~/.config/micro/colorschemes/matugen.micro'
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.vscode]
+input_path = '~/.config/matugen/templates/vscode-colors.json'
+output_path = '~/.config/matugen/vscode-colors-generated.json'
+post_hook = 'python ~/.config/matugen/scripts/update_vscode_theme.py'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.papirus]
+input_path = '~/.config/matugen/templates/papirus_color.sh'
+output_path = '~/.config/matugen/scripts/run_papirus.sh'
+post_hook = 'bash ~/.config/matugen/scripts/run_papirus.sh'
+
+[templates.hyprcursor]
+input_path = '~/.config/matugen/templates/hyprcursor_color.sh'
+output_path = '~/.config/matugen/scripts/run_hyprcursor.sh'
+post_hook = 'bash ~/.config/matugen/scripts/run_hyprcursor.sh'
+
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'

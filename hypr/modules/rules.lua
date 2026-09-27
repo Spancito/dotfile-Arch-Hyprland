@@ -49,9 +49,17 @@ hl.layer_rule({
     blur     = true,
     animation = "popin 87%",
 })
+
 hl.window_rule({
 	name = "Capturas",
 	match = {class = "flameshot"},
 	float = true,
 	size = {"400", "200"},
+})
+
+hl.window_rule({
+    name    = "zed-blur",
+    match   = { class = "^dev.zed.*" },
+    opacity = "0.90 0.80",
+    opaque  = false,
 })

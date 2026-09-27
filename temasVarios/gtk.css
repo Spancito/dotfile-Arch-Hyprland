@@ -1,0 +1,39 @@
+
+
+window.thunar,
+window.thunar .standard-view,
+window.thunar .sidebar,
+window.thunar paned,
+window.thunar treeview,
+window.thunar iconview,
+window.thunar grid,
+window.thunar box {
+    background-color: transparent;
+    background: transparent;
+}
+
+window.thunar {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+window.thunar treeview:selected, 
+window.thunar iconview:selected, 
+window.thunar .view:selected {
+    background-color: {{colors.primary.default.hex}}70;
+    color: {{colors.on_surface.default.hex}};
+    border-radius: 8px;
+}
+
+
+window.thunar rubberband, rubberband {
+    background-color: {{colors.primary.default.hex}}40;
+    border: 1px solid {{colors.primary.default.hex}};
+}
+
+
+window.thunar .sidebar row:selected {
+    background-color: {{colors.secondary.default.hex}}50;
+    color: {{colors.on_surface.default.hex}};
+    border-radius: 8px;
+}

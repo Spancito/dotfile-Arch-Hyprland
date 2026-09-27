@@ -17,7 +17,7 @@ NATIVE_PKGS=(
     prismlauncher pv python qt5-wayland qt6-wayland rofi
     slurp snapper swaybg thunar ttf-meslo-nerd unrar upower vim
     vlc-plugins-all waybar wireplumber wl-clipboard wtype xdg-desktop-portal-hyprland
-    zed
+    zed xorg-xcursorgen
 )
 
 sudo pacman -S --needed --noconfirm "${NATIVE_PKGS[@]}"
@@ -35,7 +35,14 @@ AUR_PKGS=(
 	steam
     vesktop
     zuno
+    papirus-icon-theme
+    papirus-folders-git
 )
 
 yay -S --needed --noconfirm "${AUR_PKGS[@]}"
+echo "[4/4] Copiando temas base al directorio local..."
+mkdir -p ~/.local/share/icons
+cp -r /usr/share/icons/Papirus ~/.local/share/icons/ 2>/dev/null || true
+cp -r /usr/share/icons/Papirus-Dark ~/.local/share/icons/ 2>/dev/null || true
+
 echo "¡Instalación completada con éxito!"
