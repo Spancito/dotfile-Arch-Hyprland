@@ -33,8 +33,6 @@ class MiniPlayer(Gtk.Window):
         GtkLayerShell.set_namespace(self, "miniplayer")
         GtkLayerShell.set_layer(self, GtkLayerShell.Layer.TOP)
         
-        # Waybar already reserves 30px exclusive space. 
-        # So TOP anchor 0 is directly below it! We just give it 4px gap.
         GtkLayerShell.set_margin(self, GtkLayerShell.Edge.TOP, 4)
         
         GtkLayerShell.set_anchor(self, GtkLayerShell.Edge.TOP, True)
@@ -63,11 +61,9 @@ class MiniPlayer(Gtk.Window):
         self.box.set_border_width(16)
         self.add(self.box)
 
-        # Back to HORIZONTAL
         content_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=20)
         self.box.pack_start(content_box, True, True, 0)
 
-        # 1. Image on Left
         self.image_stack = Gtk.Stack()
         self.image_stack.set_size_request(100, 100)
         self.image_stack.set_halign(Gtk.Align.CENTER)
@@ -85,7 +81,6 @@ class MiniPlayer(Gtk.Window):
         self.icon_label.set_halign(Gtk.Align.CENTER)
         self.image_stack.add_named(self.icon_label, "icon")
 
-        # 2. Text and controls on Right
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
         right_box.set_valign(Gtk.Align.CENTER)
         content_box.pack_start(right_box, True, True, 0)
@@ -123,7 +118,6 @@ class MiniPlayer(Gtk.Window):
         next_btn.connect("clicked", lambda x: self.player.next())
         ctrl_box.pack_start(next_btn, False, False, 0)
 
-        # 3. Progress bar below text/controls
         self.progress = Gtk.ProgressBar()
         self.progress.set_name("progress")
         self.box.pack_start(self.progress, False, False, 0)
