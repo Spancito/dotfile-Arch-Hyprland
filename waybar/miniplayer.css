@@ -1,0 +1,62 @@
+window#miniplayer {
+    background: transparent;
+}
+
+#main-box {
+    background-color: alpha(#181211, 0.85);
+    border: 2px solid #ffb3af;
+    border-radius: 16px;
+}
+
+#app-icon {
+    font-size: 48px;
+    color: #ffb3af;
+}
+
+#title {
+    color: #eedfde;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+#artist {
+    color: #d9c1bf;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #ffb3af;
+    font-size: 22px;
+    padding: 6px;
+    border-radius: 50%;
+    min-width: 36px;
+    min-height: 36px;
+}
+
+button:hover {
+    background: alpha(#ffb3af, 0.2);
+}
+
+button:active {
+    background: alpha(#ffb3af, 0.4);
+}
+
+#cover {
+    border-radius: 12px;
+}
+
+progressbar > trough {
+    background-color: alpha(#ffb3af, 0.2);
+    border-radius: 8px;
+    min-height: 8px;
+}
+
+progressbar > trough > progress {
+    background-color: #ffb3af;
+    border-radius: 8px;
+}

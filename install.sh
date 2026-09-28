@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm
 
 echo "[2/3] Instalando paquetes nativos..."
 NATIVE_PKGS=(
-    aria2 bind code cpupower dunst egl-wayland f2fs-tools
+    aria2 bind cava code cpupower dunst egl-wayland f2fs-tools
     fastfetch ffmpegthumbnailer flameshot flatpak gamemode gamescope git
     git-lfs glfw grim gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good
     gst-plugins-ugly hyprland kitty lutris man-pages

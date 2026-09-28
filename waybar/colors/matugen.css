@@ -1,3 +1,19 @@
 <* for name, value in colors *>
 @define-color {{name}} #{{value.default.hex_stripped}};
 <* endfor *>
+
+#custom-cava {
+    color: {{colors.primary.default.hex}};
+    margin-right: 8px;
+}
+
+#custom-cava {
+    padding-right: 2px;
+    margin-right: 0px;
+    color: {{colors.primary.default.hex}};
+}
+
+#custom-media {
+    padding-left: 2px;
+    margin-left: 0px;
+}

@@ -59,3 +59,7 @@ post_hook = 'bash ~/.config/matugen/scripts/run_hyprcursor.sh'
 [templates.fastfetch]
 input_path = '~/.config/matugen/templates/fastfetch.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.miniplayer]
+input_path = '~/.config/matugen/templates/miniplayer.css'
+output_path = '~/.config/waybar/miniplayer.css'

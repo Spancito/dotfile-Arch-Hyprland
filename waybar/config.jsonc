@@ -24,12 +24,20 @@
         "on-click-right": "swaync-client -d -sw",
         "escape": true,
     },
-    "custom/media": {
+    
+    "custom/cava": {
         "format": "{}",
-        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/cava.sh",
+        "restart-interval": 1,
+        "hide-empty-text": true
+    },
+    "custom/media":
+ {
+        "format": "{}",
+        "escape": false,
         "return-type": "json",
         "max-length": 35,
-        "on-click": "playerctl play-pause",
+        "on-click": "python3 $HOME/.config/waybar/scripts/miniplayer.py",
         "on-click-right": "playerctl stop",
         "smooth-scrolling-threshold": 1,
         "on-scroll-up": "playerctl next",

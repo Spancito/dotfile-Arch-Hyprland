@@ -1,0 +1,11 @@
+
+#custom-cava {
+    padding-right: 2px;
+    margin-right: 0px;
+    color: {{colors.primary.default.hex}};
+}
+
+#custom-media {
+    padding-left: 2px;
+    margin-left: 0px;
+}
