@@ -83,3 +83,11 @@ hl.layer_rule({
     blur     = true,
     animation = "popin 87%",
 })
+
+hl.window_rule({
+	name = "Spotify",
+	match = {
+		class = "^Spotify*"
+	},
+	workspace = "7 silent",
+})
