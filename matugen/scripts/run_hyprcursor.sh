@@ -1,2 +1,2 @@
 #!/bin/bash
-python ~/.config/matugen/scripts/generate_hyprcursor.py "#ffb3b4"
+python ~/.config/matugen/scripts/generate_hyprcursor.py "#98cdf1"
