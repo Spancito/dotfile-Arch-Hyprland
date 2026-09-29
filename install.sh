@@ -35,6 +35,7 @@ AUR_PKGS=(
 	steam
 	spotify
 	spicetify
+	sptlrx-bin
     vesktop
     papirus-icon-theme
     papirus-folders-git

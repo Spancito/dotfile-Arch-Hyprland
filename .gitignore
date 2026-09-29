@@ -3,6 +3,8 @@
 !.gitignore
 !dunst/
 !dunst/**
+!ejemplos/
+!ejemplos/**
 !fastfetch/
 !fastfetch/**
 !hypr/
@@ -16,6 +18,7 @@
 !micro/**
 !rofi/
 !rofi/**
+!sptlrx/
 !wallpapers/
 !wallpapers/**
 !waybar/
