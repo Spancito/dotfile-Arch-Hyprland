@@ -33,8 +33,9 @@ AUR_PKGS=(
     proton-cachyos-native
     shelly
 	steam
+	spotify
+	spicetify
     vesktop
-    zuno
     papirus-icon-theme
     papirus-folders-git
 )

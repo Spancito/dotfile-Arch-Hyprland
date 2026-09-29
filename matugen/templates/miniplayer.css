@@ -60,3 +60,16 @@ progressbar > trough > progress {
     background-color: {{colors.primary.default.hex}};
     border-radius: 8px;
 }
+
+#progress-label {
+    color: {{colors.primary.default.hex}};
+    font-size: 16px;
+    letter-spacing: -2px;
+}
+
+#time-label {
+    color: {{colors.on_surface_variant.default.hex}};
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bold;
+}

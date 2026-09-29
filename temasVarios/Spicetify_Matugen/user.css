@@ -1,0 +1,14 @@
+/* A simple transparent glass theme for Spotify, relying on color.ini for colors */
+:root {
+  --spice-main-transparent: rgba(var(--spice-rgb-main), 0.5);
+}
+.Root__top-container,
+.main-view-container__scroll-node, 
+.os-host,
+.main-entityHeader-background,
+.main-entityHeader-overlay,
+body,
+.Root__nav-bar {
+  background-color: transparent !important;
+  background: transparent !important;
+}

@@ -118,14 +118,37 @@ class MiniPlayer(Gtk.Window):
         next_btn.connect("clicked", lambda x: self.player.next())
         ctrl_box.pack_start(next_btn, False, False, 0)
 
-        self.progress = Gtk.ProgressBar()
-        self.progress.set_name("progress")
-        self.box.pack_start(self.progress, False, False, 0)
+        self.lyrics_btn = Gtk.Button(label="󰝚")
+        self.lyrics_btn.set_name("lyrics-btn")
+        self.lyrics_btn.connect("clicked", self.toggle_lyrics)
+        ctrl_box.pack_start(self.lyrics_btn, False, False, 0)
+
+        prog_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        prog_box.set_halign(Gtk.Align.CENTER)
+        self.box.pack_start(prog_box, False, False, 0)
+
+        self.time_elapsed = Gtk.Label(label="00:00")
+        self.time_elapsed.set_name("time-label")
+        prog_box.pack_start(self.time_elapsed, False, False, 0)
+
+        self.progress = Gtk.Label()
+        self.progress.set_name("progress-label")
+        prog_box.pack_start(self.progress, False, False, 0)
+
+        self.time_total = Gtk.Label(label="00:00")
+        self.time_total.set_name("time-label")
+        prog_box.pack_start(self.time_total, False, False, 0)
 
         try:
             if self.player.get_title():
                 self.on_metadata_change(self.player, self.player.props.metadata)
                 self.on_status_change(self.player, self.player.props.playback_status)
+            pname = getattr(player.props, 'player_name', '')
+            p_name = pname.lower() if pname else ""
+            if "spotify" in p_name or "spicetify" in p_name:
+                self.lyrics_btn.set_visible(True)
+            else:
+                self.lyrics_btn.set_visible(False)
         except Exception as e:
             pass
 
@@ -135,6 +158,15 @@ class MiniPlayer(Gtk.Window):
         self.connect("focus-out-event", self.on_focus_out)
         self.connect("key-press-event", self.on_key_press)
         self.show_all()
+
+    def toggle_lyrics(self, btn):
+        import subprocess
+        try:
+            subprocess.run(["pkill", "-x", "sptlrx"])
+        except:
+            pass
+        subprocess.Popen(["bash", "/home/spancito/.config/waybar/scripts/launch_lyrics.sh"])
+        self.quit()
 
     def toggle_play(self, btn):
         try:
@@ -166,18 +198,40 @@ class MiniPlayer(Gtk.Window):
     def update_progress(self):
         try:
             metadata_var = self.player.props.metadata
+            fraction = 0
+            pos_sec = 0
+            len_sec = 0
+            
             if metadata_var:
                 metadata = metadata_var.unpack()
                 length = metadata.get("mpris:length", 0)
                 if length > 0 and length < 9000000000000000000:
                     pos = self.player.get_position()
-                    self.progress.set_fraction(pos / length)
-                else:
-                    self.progress.set_fraction(0)
+                    fraction = pos / length
+                    pos_sec = int(pos / 1000000)
+                    len_sec = int(length / 1000000)
+            
+            bar_len = 16
+            pos_idx = int(fraction * bar_len)
+            if pos_idx > bar_len: pos_idx = bar_len
+            
+            wave = "〰" * pos_idx
+            line = "─" * (bar_len - pos_idx)
+            
+            text = f"<span face='monospace' weight='bold'>{wave}⬤{line}</span>"
+            self.progress.set_markup(text)
+            
+            if len_sec > 0:
+                self.time_elapsed.set_text(f"{pos_sec // 60:02d}:{pos_sec % 60:02d}")
+                self.time_total.set_text(f"{len_sec // 60:02d}:{len_sec % 60:02d}")
             else:
-                self.progress.set_fraction(0)
+                self.time_elapsed.set_text("--:--")
+                self.time_total.set_text("--:--")
+                
         except Exception as e:
-            self.progress.set_fraction(0)
+            self.progress.set_markup(f"<span face='monospace' weight='bold'>〰⬤───────────────</span>")
+            self.time_elapsed.set_text("--:--")
+            self.time_total.set_text("--:--")
         return True
 
     def on_status_change(self, player, status):
@@ -247,6 +301,7 @@ class MiniPlayer(Gtk.Window):
                         break
                 self.icon_label.set_markup(f"<span>{icon}</span>")
                 self.image_stack.set_visible_child_name("icon")
+
         except Exception as e:
             pass
 

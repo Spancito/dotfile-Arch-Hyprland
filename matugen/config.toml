@@ -63,3 +63,12 @@ output_path = '~/.config/fastfetch/config.jsonc'
 [templates.miniplayer]
 input_path = '~/.config/matugen/templates/miniplayer.css'
 output_path = '~/.config/waybar/miniplayer.css'
+
+[templates.spicetify]
+input_path = '~/.config/matugen/templates/spicetify-color.ini'
+output_path = '~/.config/spicetify/Themes/Matugen/color.ini'
+post_hook = 'spicetify apply'
+
+[templates.lyrics_launcher]
+input_path = '~/.config/matugen/templates/launch_lyrics.sh'
+output_path = '~/.config/waybar/scripts/launch_lyrics.sh'

@@ -63,3 +63,23 @@ hl.window_rule({
     opacity = "0.90 0.80",
     opaque  = false,
 })
+
+hl.window_rule({
+	name = "Lyrics-Window",
+	match = {
+		class = "sptlrx",
+	},
+	float = true,
+	size = {"600", "400"},
+	move = "100%-620 100%-420",
+	opacity = "1.00 0.80",
+	opaque = false,
+	workspace = "7 silent",
+})
+
+hl.layer_rule({
+    name     = "Lyrics-Window",
+    match    = { namespace = "sptlrx" },
+    blur     = true,
+    animation = "popin 87%",
+})
