@@ -1,106 +1,106 @@
 local M = {}
 
-M.image = "/tmp/matugen_frame.png"
+M.image = "/home/spancito/.config/wallpapers/Pictures/Wallpapers/cat_leaves.png"
 
-M.background = "rgba(1a110fff)"
+M.background = "rgba(131318ff)"
 
 M.error = "rgba(ffb4abff)"
 
 M.error_container = "rgba(93000aff)"
 
-M.inverse_on_surface = "rgba(392e2cff)"
+M.inverse_on_surface = "rgba(313036ff)"
 
-M.inverse_primary = "rgba(904b3bff)"
+M.inverse_primary = "rgba(5a5891ff)"
 
-M.inverse_surface = "rgba(f1dfdbff)"
+M.inverse_surface = "rgba(e5e1e9ff)"
 
-M.on_background = "rgba(f1dfdbff)"
+M.on_background = "rgba(e5e1e9ff)"
 
 M.on_error = "rgba(690005ff)"
 
 M.on_error_container = "rgba(ffdad6ff)"
 
-M.on_primary = "rgba(561f12ff)"
+M.on_primary = "rgba(2b2a60ff)"
 
-M.on_primary_container = "rgba(ffdad2ff)"
+M.on_primary_container = "rgba(e2dfffff)"
 
-M.on_primary_fixed = "rgba(3a0a02ff)"
+M.on_primary_fixed = "rgba(16134aff)"
 
-M.on_primary_fixed_variant = "rgba(733426ff)"
+M.on_primary_fixed_variant = "rgba(424078ff)"
 
-M.on_secondary = "rgba(442a23ff)"
+M.on_secondary = "rgba(2f2e42ff)"
 
-M.on_secondary_container = "rgba(ffdad2ff)"
+M.on_secondary_container = "rgba(e3e0f9ff)"
 
-M.on_secondary_fixed = "rgba(2c1510ff)"
+M.on_secondary_fixed = "rgba(1a1a2cff)"
 
-M.on_secondary_fixed_variant = "rgba(5d3f39ff)"
+M.on_secondary_fixed_variant = "rgba(464559ff)"
 
-M.on_surface = "rgba(f1dfdbff)"
+M.on_surface = "rgba(e5e1e9ff)"
 
-M.on_surface_variant = "rgba(d8c2bdff)"
+M.on_surface_variant = "rgba(c8c5d0ff)"
 
-M.on_tertiary = "rgba(3c2f04ff)"
+M.on_tertiary = "rgba(472639ff)"
 
-M.on_tertiary_container = "rgba(f8e1a6ff)"
+M.on_tertiary_container = "rgba(ffd8eaff)"
 
-M.on_tertiary_fixed = "rgba(241a00ff)"
+M.on_tertiary_fixed = "rgba(2f1123ff)"
 
-M.on_tertiary_fixed_variant = "rgba(544519ff)"
+M.on_tertiary_fixed_variant = "rgba(603c50ff)"
 
-M.outline = "rgba(a08c88ff)"
+M.outline = "rgba(928f9aff)"
 
-M.outline_variant = "rgba(534340ff)"
+M.outline_variant = "rgba(47464fff)"
 
-M.primary = "rgba(ffb4a3ff)"
+M.primary = "rgba(c3c0ffff)"
 
-M.primary_container = "rgba(733426ff)"
+M.primary_container = "rgba(424078ff)"
 
-M.primary_fixed = "rgba(ffdad2ff)"
+M.primary_fixed = "rgba(e2dfffff)"
 
-M.primary_fixed_dim = "rgba(ffb4a3ff)"
+M.primary_fixed_dim = "rgba(c3c0ffff)"
 
 M.scrim = "rgba(000000ff)"
 
-M.secondary = "rgba(e7bdb4ff)"
+M.secondary = "rgba(c7c4ddff)"
 
-M.secondary_container = "rgba(5d3f39ff)"
+M.secondary_container = "rgba(464559ff)"
 
-M.secondary_fixed = "rgba(ffdad2ff)"
+M.secondary_fixed = "rgba(e3e0f9ff)"
 
-M.secondary_fixed_dim = "rgba(e7bdb4ff)"
+M.secondary_fixed_dim = "rgba(c7c4ddff)"
 
 M.shadow = "rgba(000000ff)"
 
-M.source_color = "rgba(ea3303ff)"
+M.source_color = "rgba(3b3a5aff)"
 
-M.surface = "rgba(1a110fff)"
+M.surface = "rgba(131318ff)"
 
-M.surface_bright = "rgba(423734ff)"
+M.surface_bright = "rgba(39383fff)"
 
-M.surface_container = "rgba(271d1bff)"
+M.surface_container = "rgba(201f25ff)"
 
-M.surface_container_high = "rgba(322825ff)"
+M.surface_container_high = "rgba(2a292fff)"
 
-M.surface_container_highest = "rgba(3d3230ff)"
+M.surface_container_highest = "rgba(35343aff)"
 
-M.surface_container_low = "rgba(231917ff)"
+M.surface_container_low = "rgba(1b1b21ff)"
 
-M.surface_container_lowest = "rgba(140c0aff)"
+M.surface_container_lowest = "rgba(0e0e13ff)"
 
-M.surface_dim = "rgba(1a110fff)"
+M.surface_dim = "rgba(131318ff)"
 
-M.surface_tint = "rgba(ffb4a3ff)"
+M.surface_tint = "rgba(c3c0ffff)"
 
-M.surface_variant = "rgba(534340ff)"
+M.surface_variant = "rgba(47464fff)"
 
-M.tertiary = "rgba(dbc58cff)"
+M.tertiary = "rgba(eab9d1ff)"
 
-M.tertiary_container = "rgba(544519ff)"
+M.tertiary_container = "rgba(603c50ff)"
 
-M.tertiary_fixed = "rgba(f8e1a6ff)"
+M.tertiary_fixed = "rgba(ffd8eaff)"
 
-M.tertiary_fixed_dim = "rgba(dbc58cff)"
+M.tertiary_fixed_dim = "rgba(eab9d1ff)"
 
 
 return M
