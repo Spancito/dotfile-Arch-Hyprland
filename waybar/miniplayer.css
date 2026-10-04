@@ -3,25 +3,25 @@ window#miniplayer {
 }
 
 #main-box {
-    background-color: alpha(#18130a, 0.85);
-    border: 2px solid #fdbc30;
+    background-color: alpha(#121316, 0.85);
+    border: 2px solid #b2c8ed;
     border-radius: 16px;
 }
 
 #app-icon {
     font-size: 48px;
-    color: #fdbc30;
+    color: #b2c8ed;
 }
 
 #title {
-    color: #ede1d2;
+    color: #e3e2e5;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 2px;
 }
 
 #artist {
-    color: #d4c4ad;
+    color: #c4c6ce;
     font-size: 13px;
     margin-bottom: 8px;
 }
@@ -30,7 +30,7 @@ button {
     background: transparent;
     border: none;
     box-shadow: none;
-    color: #fdbc30;
+    color: #b2c8ed;
     font-size: 22px;
     padding: 6px;
     border-radius: 50%;
@@ -39,11 +39,11 @@ button {
 }
 
 button:hover {
-    background: alpha(#fdbc30, 0.2);
+    background: alpha(#b2c8ed, 0.2);
 }
 
 button:active {
-    background: alpha(#fdbc30, 0.4);
+    background: alpha(#b2c8ed, 0.4);
 }
 
 #cover {
@@ -51,24 +51,24 @@ button:active {
 }
 
 progressbar > trough {
-    background-color: alpha(#fdbc30, 0.2);
+    background-color: alpha(#b2c8ed, 0.2);
     border-radius: 8px;
     min-height: 8px;
 }
 
 progressbar > trough > progress {
-    background-color: #fdbc30;
+    background-color: #b2c8ed;
     border-radius: 8px;
 }
 
 #progress-label {
-    color: #fdbc30;
+    color: #b2c8ed;
     font-size: 16px;
     letter-spacing: -2px;
 }
 
 #time-label {
-    color: #d4c4ad;
+    color: #c4c6ce;
     font-size: 13px;
     font-family: monospace;
     font-weight: bold;
