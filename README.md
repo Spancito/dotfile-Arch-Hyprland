@@ -37,9 +37,9 @@
 ## Video
 
   <div align="center">
-      <video src="ejemplos/videoEscritorio.mp4" controls="controls" width="800">
-        Tu navegador no soporta reproducción de video.
-      </video>
+    <video src="ejemplos/videoEscritorio.mp4" controls="controls" width="800">
+      Tu navegador no soporta reproducción de video.
+    </video>
   </div>
 
   </div>
