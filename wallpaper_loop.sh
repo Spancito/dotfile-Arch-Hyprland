@@ -11,7 +11,7 @@ if [ -e "$LOCKFILE" ]; then
 fi
 
 echo $$ > "$LOCKFILE"
-trap 'rm -f "$LOCKFILE"; pkill -x swaybg; pkill -x mpvpaper; exit 0' EXIT TERM INT
+trap 'rm -f "$LOCKFILE"; exit 0' EXIT TERM INT
 
 while true; do
     archivo=$(find "$DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.webm" \) | shuf -n 1)
@@ -21,13 +21,20 @@ while true; do
         extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
 
         if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
-            pkill -x mpvpaper
-            pkill -x swaybg
+            OLD_PIDS=$(pgrep -x swaybg)
+            OLD_VIDS=$(pgrep -x mpvpaper)
+            
             swaybg -i "$archivo" -m fill >/dev/null 2>&1 &
             matugen image -t scheme-fidelity "$archivo" >/dev/null 2>&1 &
+            
+            sleep 0.3
+            
+            [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+            [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
         elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
-            pkill -x swaybg
-            pkill -x mpvpaper
+            OLD_PIDS=$(pgrep -x swaybg)
+            OLD_VIDS=$(pgrep -x mpvpaper)
+            
             mpvpaper -o "no-audio loop" "*" "$archivo" >/dev/null 2>&1 &
             
             filename=$(basename -- "$archivo")
@@ -40,9 +47,15 @@ while true; do
             fi
             
             matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
+            
+            sleep 0.3
+            
+            [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+            [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
         fi
         
         echo "$archivo" > /tmp/current_wallpaper_path
     fi
-    sleep $INTERVAL
+    sleep $INTERVAL &
+    wait $!
 done

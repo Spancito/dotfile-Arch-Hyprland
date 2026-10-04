@@ -29,13 +29,20 @@ if [ -n "$SELECTED" ]; then
     extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
     
     if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
-        pkill -x mpvpaper
-        pkill -x swaybg
+        OLD_PIDS=$(pgrep -x swaybg)
+        OLD_VIDS=$(pgrep -x mpvpaper)
+        
         swaybg -i "$FULL_PATH" -m fill >/dev/null 2>&1 &
         matugen image -t scheme-fidelity "$FULL_PATH" >/dev/null 2>&1 &
+        
+        sleep 0.3
+        
+        [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+        [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
     elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
-        pkill -x swaybg
-        pkill -x mpvpaper
+        OLD_PIDS=$(pgrep -x swaybg)
+        OLD_VIDS=$(pgrep -x mpvpaper)
+        
         mpvpaper -o "no-audio loop" "*" "$FULL_PATH" >/dev/null 2>&1 &
         
         THUMB_PATH="$THUMB_DIR/${SELECTED}.png"
@@ -43,5 +50,10 @@ if [ -n "$SELECTED" ]; then
             ffmpeg -y -v error -ss 00:00:02 -i "$FULL_PATH" -vframes 1 -update 1 "$THUMB_PATH"
         fi
         matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
+        
+        sleep 0.3
+        
+        [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+        [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
     fi
 fi
