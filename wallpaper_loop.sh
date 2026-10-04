@@ -22,17 +22,27 @@ while true; do
 
         if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
             pkill -x mpvpaper
-            matugen image -t scheme-fidelity "$archivo" >/dev/null 2>&1
             pkill -x swaybg
             swaybg -i "$archivo" -m fill >/dev/null 2>&1 &
+            matugen image -t scheme-fidelity "$archivo" >/dev/null 2>&1 &
         elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
             pkill -x swaybg
-            ffmpeg -y -v error -ss 00:00:02 -i "$archivo" -vframes 1 -update 1 /tmp/current_wallpaper.jpg
-            matugen image -t scheme-fidelity /tmp/current_wallpaper.jpg >/dev/null 2>&1
             pkill -x mpvpaper
-            mpvpaper -o "no-audio loop-file=inf --keepaspect=no" "*" "$archivo" >/dev/null 2>&1 &
+            mpvpaper -o "no-audio loop" "*" "$archivo" >/dev/null 2>&1 &
+            
+            filename=$(basename -- "$archivo")
+            THUMB_DIR="$HOME/.cache/wallpaper_thumbs"
+            mkdir -p "$THUMB_DIR"
+            THUMB_PATH="$THUMB_DIR/${filename}.png"
+            
+            if [ ! -f "$THUMB_PATH" ]; then
+                ffmpeg -y -v error -ss 00:00:02 -i "$archivo" -vframes 1 -update 1 "$THUMB_PATH"
+            fi
+            
+            matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
         fi
+        
+        echo "$archivo" > /tmp/current_wallpaper_path
     fi
-
     sleep $INTERVAL
 done

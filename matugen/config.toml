@@ -10,7 +10,7 @@ post_hook = 'hyprctl reload'
 [templates.waybar]
 input_path = '~/.config/waybar/colors/matugen.css'
 output_path = '~/.config/waybar/colors/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar || waybar >/dev/null 2>&1 &'
+post_hook = 'killall -SIGUSR2 waybar'
 
 [templates.hyprland-conf]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
@@ -65,9 +65,8 @@ input_path = '~/.config/matugen/templates/miniplayer.css'
 output_path = '~/.config/waybar/miniplayer.css'
 
 [templates.spicetify]
-input_path = '~/.config/matugen/templates/spicetify-color.ini'
-output_path = '~/.config/spicetify/Themes/Matugen/color.ini'
-post_hook = 'spicetify apply'
+input_path = '~/.config/matugen/templates/spicetify-colors.css'
+output_path = '~/.config/spicetify/Themes/Matugen/colors.css'
 
 [templates.lyrics_launcher]
 input_path = '~/.config/matugen/templates/launch_lyrics.sh'

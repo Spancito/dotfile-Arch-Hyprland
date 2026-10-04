@@ -1,4 +1,30 @@
 #!/usr/bin/env python3
+import os
+import signal
+import sys
+import threading
+import subprocess
+
+LOCK_FILE = '/tmp/waybar_miniplayer.pid'
+try:
+    if os.path.exists(LOCK_FILE):
+        with open(LOCK_FILE, 'r') as f:
+            old_pid = int(f.read().strip())
+        try:
+            os.kill(old_pid, signal.SIGTERM)
+        except OSError:
+            pass
+except Exception:
+    pass
+
+with open(LOCK_FILE, 'w') as f:
+    f.write(str(os.getpid()))
+
+def cleanup():
+    try:
+        os.remove(LOCK_FILE)
+    except:
+        pass
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GtkLayerShell', '0.1')

@@ -5,11 +5,6 @@ THUMB_DIR="$HOME/.cache/wallpaper_thumbs"
 
 mkdir -p "$THUMB_DIR"
 
-if [ ! -d "$WALL_DIR" ]; then
-    notify-send "Error" "La carpeta $WALL_DIR no existe."
-    exit 1
-fi
-
 ROFI_INPUT=""
 while IFS= read -r file; do
     filename=$(basename "$file")
@@ -30,18 +25,23 @@ SELECTED=$(echo -e "$ROFI_INPUT" | rofi -dmenu -i -theme "$HOME/.config/rofi/the
 
 if [ -n "$SELECTED" ]; then
     FULL_PATH="$WALL_DIR/$SELECTED"
+    extension="${SELECTED##*.}"
+    extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
     
-    pkill mpvpaper
-    mpvpaper -o "no-audio --loop-playlist --keepaspect=no" '*' "$FULL_PATH" &
-
-    if [[ "$SELECTED" =~ \.(mp4|mkv|webm)$ ]]; then
-        TEMP_FRAME="/tmp/matugen_frame.png"
-        ffmpeg -y -i "$FULL_PATH" -vframes 1 "$TEMP_FRAME" &>/dev/null
-        matugen image "$TEMP_FRAME"
-    else
-        matugen image "$FULL_PATH"
+    if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
+        pkill -x mpvpaper
+        pkill -x swaybg
+        swaybg -i "$FULL_PATH" -m fill >/dev/null 2>&1 &
+        matugen image -t scheme-fidelity "$FULL_PATH" >/dev/null 2>&1 &
+    elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
+        pkill -x swaybg
+        pkill -x mpvpaper
+        mpvpaper -o "no-audio loop" "*" "$FULL_PATH" >/dev/null 2>&1 &
+        
+        THUMB_PATH="$THUMB_DIR/${SELECTED}.png"
+        if [ ! -f "$THUMB_PATH" ]; then
+            ffmpeg -y -v error -ss 00:00:02 -i "$FULL_PATH" -vframes 1 -update 1 "$THUMB_PATH"
+        fi
+        matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
     fi
-
-    pkill -SIGUSR2 waybar || (killall waybar && waybar &)
-    hyprctl reload
 fi

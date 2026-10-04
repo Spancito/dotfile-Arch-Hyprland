@@ -92,7 +92,12 @@ for file in svg_files:
             elif fill in ['#fff', '#ffffff']:
                 elem.set('fill', '#111111')
             else:
-                elem.set('fill', color)
+                if base in ['watch', 'left_ptr_watch', 'progress', 'wait', 'half-busy']:
+                    elem.set('fill', 'none')
+                    elem.set('stroke', color)
+                    elem.set('stroke-width', '2')
+                else:
+                    elem.set('fill', color)
                 
     shape_dir = f"{hyprcursors_dir}/{base}"
     os.makedirs(shape_dir, exist_ok=True)
@@ -161,3 +166,35 @@ print(f"Hyprcursor and Xcursor themes '{theme_name}' generated successfully.")
 subprocess.run(["gsettings", "set", "org.gnome.desktop.interface", "cursor-theme", theme_name])
 subprocess.run(["gsettings", "set", "org.gnome.desktop.interface", "cursor-size", "32"])
 subprocess.run(["dbus-update-activation-environment", "--systemd", f"XCURSOR_THEME={theme_name}", "XCURSOR_SIZE=32", f"HYPRCURSOR_THEME={theme_name}", "HYPRCURSOR_SIZE=32"])
+
+default_icon_dir = os.path.expanduser("~/.icons/default")
+os.makedirs(default_icon_dir, exist_ok=True)
+index_theme_path = os.path.join(default_icon_dir, "index.theme")
+index_theme_content = f"[Icon Theme]\nInherits={theme_name}\n"
+with open(index_theme_path, "w") as f:
+    f.write(index_theme_content)
+
+try:
+    subprocess.run(["gsettings", "set", "org.gnome.desktop.interface", "cursor-theme", theme_name], check=False)
+except:
+    pass
+
+gtk_settings_dir = os.path.expanduser("~/.config/gtk-3.0")
+os.makedirs(gtk_settings_dir, exist_ok=True)
+gtk_settings_path = os.path.join(gtk_settings_dir, "settings.ini")
+if os.path.exists(gtk_settings_path):
+    with open(gtk_settings_path, 'r') as f:
+        content = f.read()
+    import re
+    if 'gtk-cursor-theme-name' in content:
+        content = re.sub(r'gtk-cursor-theme-name\s*=.*', f'gtk-cursor-theme-name={theme_name}', content)
+    else:
+        if '[Settings]' in content:
+            content = content.replace('[Settings]', f'[Settings]\ngtk-cursor-theme-name={theme_name}')
+        else:
+            content += f"\n[Settings]\ngtk-cursor-theme-name={theme_name}\n"
+    with open(gtk_settings_path, 'w') as f:
+        f.write(content)
+else:
+    with open(gtk_settings_path, 'w') as f:
+        f.write(f"[Settings]\ngtk-cursor-theme-name={theme_name}\n")

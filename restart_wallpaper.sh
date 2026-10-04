@@ -1,11 +1,7 @@
-MY_PID=$$
+#!/usr/bin/env bash
+pkill -f "wallpaper_loop.sh" 2>/dev/null
+pkill -x swaybg 2>/dev/null
+pkill -x mpvpaper 2>/dev/null
+rm -f /tmp/wallpaper_loop.lock
 
-for pid in $(pgrep -f "wallpaper_loop.sh"); do
-    if [ "$pid" -ne "$MY_PID" ]; then
-        kill -9 "$pid" 2>/dev/null
-    fi
-done
-
-pkill -9 mpvpaper 2>/dev/null
-
-nohup bash /home/spancito/.config/wallpaper_loop.sh > /tmp/wallpaper.log 2>&1 &
+nohup bash "$HOME/.config/wallpaper_loop.sh" > /tmp/wallpaper.log 2>&1 &

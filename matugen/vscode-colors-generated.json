@@ -7,9 +7,9 @@
         "terminal.background": "#00000000",
         "titleBar.activeBackground": "#00000000",
         "titleBar.inactiveBackground": "#00000000",
-        "window.activeBorder": "#b2c8ed",
+        "window.activeBorder": "#ffb4a3",
         "editorGroupHeader.tabsBackground": "#00000000",
-        "tab.activeBackground": "#1b1b1e60",
+        "tab.activeBackground": "#29171360",
         "tab.inactiveBackground": "#00000000"
     },
     "editor.tokenColorCustomizations": {
@@ -17,35 +17,35 @@
             {
                 "scope": ["keyword", "storage", "variable.language"],
                 "settings": {
-                    "foreground": "#b2c8ed",
+                    "foreground": "#ffb4a3",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["entity.name.function", "support.function"],
                 "settings": {
-                    "foreground": "#bfc7d7",
+                    "foreground": "#ffb4a3",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["string", "markup.inline.raw"],
                 "settings": {
-                    "foreground": "#e4c286",
+                    "foreground": "#aec6ff",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["variable", "support.variable"],
                 "settings": {
-                    "foreground": "#e3e2e5",
+                    "foreground": "#fddbd4",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["comment", "punctuation.definition.comment"],
                 "settings": {
-                    "foreground": "#8e9198"
+                    "foreground": "#ad8880"
                 }
             }
         ]
