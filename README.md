@@ -19,11 +19,33 @@
 
 </div>
 
-## Capturas de Pantalla
+# Capturas de Pantalla
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/archlinux/archweb/master/sitestatic/archlogo.png" alt="Preview Placeholder" width="700"/>
+  <div align="center">
+    <img src="ejemplos/1.png" alt="Captura 1" width="800" />
+    <br/>
+    <br/>
+    <img src="ejemplos/2.png" alt="Captura 2" width="800" />
+    <br/>
+    <br/>
+    <img src="ejemplos/3.png" alt="Captura 3" width="800" />
+    <br/>
+    <br/>
+    <img src="ejemplos/4.png" alt="Captura 4" width="800" />
+
+## Video
+
+  <div align="center">
+      <video src="ejemplos/videoEscritorio.mp4" controls="controls" width="800">
+        Tu navegador no soporta reproducción de video.
+      </video>
+  </div>
+
+  </div>
   <br/>
 </div>
 
-</div>
+</div> 
+
+
