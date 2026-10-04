@@ -120,7 +120,7 @@
         "spacing": 10,
         "show-passive-items": true
     },
-    "layer": "top",
+    "layer": "bottom",
     "modules-left": [
         "custom/launcher",
         "clock",
