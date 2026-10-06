@@ -16,6 +16,8 @@
 !matugen/**
 !micro/
 !micro/**
+!nvim/
+!nvim/**
 !rofi/
 !rofi/**
 !sptlrx/

@@ -10,15 +10,15 @@ sudo pacman -Syu --noconfirm
 echo "[2/3] Instalando paquetes nativos..."
 NATIVE_PKGS=(
     aria2 bind cava code cpupower dunst egl-wayland f2fs-tools
-    fastfetch ffmpegthumbnailer flameshot flatpak gamemode gamescope git
+    fastfetch fd ffmpegthumbnailer flameshot flatpak gamemode gamescope gemini-cli git
     git-lfs glfw grim gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good
     gst-plugins-ugly hyprland kitty lutris man-pages
-    matugen meld noto-fonts obs-studio opencode pipewire-jack plocate
-    prismlauncher pv python qt5-wayland qt6-wayland rofi
+    matugen meld neovim noto-fonts obs-studio opencode pipewire-jack plocate
+    prismlauncher pv python qt5-wayland qt6-wayland ripgrep rofi
     slurp snapper swaybg thunar ttf-meslo-nerd unrar upower vim
     vlc-plugins-all waybar wireplumber wl-clipboard wtype xdg-desktop-portal-hyprland
     zed xorg-xcursorgen
-)
+    )
 
 sudo pacman -S --needed --noconfirm "${NATIVE_PKGS[@]}"
 
