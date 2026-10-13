@@ -3,25 +3,25 @@ window#miniplayer {
 }
 
 #main-box {
-    background-color: alpha(#131314, 0.85);
-    border: 2px solid #c4c6cd;
+    background-color: alpha(#181211, 0.85);
+    border: 2px solid #ffb3af;
     border-radius: 16px;
 }
 
 #app-icon {
     font-size: 48px;
-    color: #c4c6cd;
+    color: #ffb3af;
 }
 
 #title {
-    color: #e5e2e2;
+    color: #eedfde;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 2px;
 }
 
 #artist {
-    color: #c6c6cb;
+    color: #d9c1bf;
     font-size: 13px;
     margin-bottom: 8px;
 }
@@ -30,7 +30,7 @@ button {
     background: transparent;
     border: none;
     box-shadow: none;
-    color: #c4c6cd;
+    color: #ffb3af;
     font-size: 22px;
     padding: 6px;
     border-radius: 50%;
@@ -39,11 +39,11 @@ button {
 }
 
 button:hover {
-    background: alpha(#c4c6cd, 0.2);
+    background: alpha(#ffb3af, 0.2);
 }
 
 button:active {
-    background: alpha(#c4c6cd, 0.4);
+    background: alpha(#ffb3af, 0.4);
 }
 
 #cover {
@@ -51,25 +51,163 @@ button:active {
 }
 
 progressbar > trough {
-    background-color: alpha(#c4c6cd, 0.2);
+    background-color: alpha(#ffb3af, 0.2);
     border-radius: 8px;
     min-height: 8px;
 }
 
 progressbar > trough > progress {
-    background-color: #c4c6cd;
+    background-color: #ffb3af;
     border-radius: 8px;
 }
 
 #progress-label {
-    color: #c4c6cd;
+    color: #ffb3af;
     font-size: 16px;
     letter-spacing: -2px;
 }
 
 #time-label {
-    color: #c6c6cb;
+    color: #d9c1bf;
     font-size: 13px;
     font-family: monospace;
     font-weight: bold;
+}
+
+window#taskswidget {
+    background: transparent;
+}
+
+#tasks-main-box {
+    background-color: alpha(#181211, 0.85);
+    border: 2px solid #ffb3af;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+#task-search-entry {
+    background-color: alpha(#3b3332, 0.6);
+    color: #eedfde;
+    border: 1px solid alpha(#a18c8a, 0.4);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+#task-search-entry:focus {
+    border-color: #ffb3af;
+}
+
+#task-add-btn {
+    background-color: alpha(#ffb3af, 0.2);
+    color: #ffb3af;
+    border-radius: 10px;
+    font-size: 18px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0;
+}
+
+#task-add-btn:hover {
+    background-color: #ffb3af;
+    color: #571d1d;
+}
+
+#tasks-list {
+    background: transparent;
+}
+
+.task-row {
+    background-color: alpha(#251e1d, 0.4);
+    border-radius: 10px;
+    padding: 6px 10px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.task-row:hover {
+    background-color: alpha(#3b3332, 0.8);
+}
+
+.task-title {
+    color: #eedfde;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-desc {
+    color: #d9c1bf;
+    font-size: 12px;
+}
+
+.task-action-btn {
+    color: #ffb3af;
+    font-size: 14px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 2px;
+}
+
+.task-action-btn:hover {
+    background-color: alpha(#ffb3af, 0.2);
+}
+
+.task-delete-btn {
+    color: #ffb4ab;
+    font-size: 14px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 2px;
+}
+
+.task-delete-btn:hover {
+    background-color: alpha(#ffb4ab, 0.2);
+}
+
+.task-edit-box {
+    background-color: alpha(#302828, 0.7);
+    border: 1px solid alpha(#ffb3af, 0.5);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 6px;
+}
+
+.task-edit-entry {
+    background-color: alpha(#3b3332, 0.6);
+    color: #eedfde;
+    border: 1px solid alpha(#a18c8a, 0.3);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.task-edit-entry:focus {
+    border-color: #ffb3af;
+}
+
+.task-save-btn {
+    background-color: #ffb3af;
+    color: #571d1d;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    min-height: 28px;
+}
+
+.task-save-btn:hover {
+    background-color: alpha(#ffb3af, 0.8);
+}
+
+.task-cancel-btn {
+    background-color: alpha(#534342, 0.4);
+    color: #d9c1bf;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 4px 10px;
+    min-height: 28px;
+}
+
+.task-cancel-btn:hover {
+    background-color: alpha(#534342, 0.8);
 }

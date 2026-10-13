@@ -8,7 +8,7 @@ require("modules/rules")
 
 hl.env("XCURSOR_SIZE", "32")
 hl.env("HYPRCURSOR_SIZE", "32")
-hl.env("HYPRCURSOR_THEME", "AfterglowDynamic_A")
+hl.env("HYPRCURSOR_THEME", "AfterglowDynamic_B")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 hl.env("GTK_THEME", "Adwaita:dark")

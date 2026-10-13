@@ -37,19 +37,9 @@ tooltip label {
 #clock,
 #workspaces,
 #tray,
-#custom-notification,
 #custom-media,
-#custom-pacman,
-#custom-weather,
 #pulseaudio,
-#battery,
-#network,
-#power-profiles-daemon,
-#backlight,
-#cpu,
-#memory,
-#idle-inhibitor,
-#custom-vpn {
+#network {
     background-color: alpha(@surface_container_high, 0.85);
     border: 1px solid alpha(@outline_variant, 0.5);
     box-shadow:
@@ -75,16 +65,6 @@ tooltip label {
     border-color: alpha(@tertiary, 0.35);
 }
 
-#custom-pacman {
-    color: @tertiary;
-    border-color: alpha(@tertiary, 0.35);
-}
-
-#custom-weather {
-    color: @secondary;
-    border-color: alpha(@secondary, 0.35);
-}
-
 #pulseaudio {
     color: @primary;
     border-color: alpha(@primary, 0.35);
@@ -95,39 +75,8 @@ tooltip label {
     border-color: alpha(@tertiary, 0.35);
 }
 
-#custom-notification {
-    color: @secondary;
-    border-color: alpha(@secondary, 0.35);
-    transition: all 0.3s ease-in-out;
-}
-
-#battery {
-    color: @secondary;
-    border-color: alpha(@secondary, 0.35);
-}
-
-#cpu {
-    color: @tertiary;
-    border-color: alpha(@tertiary, 0.35);
-}
-
-#memory {
-    color: @secondary;
-    border-color: alpha(@secondary, 0.35);
-}
-
-#backlight {
-    color: @primary;
-    border-color: alpha(@primary, 0.35);
-}
-
 #tray {
     color: @on_surface;
-}
-
-#power-profiles-daemon {
-    color: @secondary;
-    margin-right: 0;
 }
 
 #custom-launcher:hover {
@@ -148,18 +97,6 @@ tooltip label {
     box-shadow: 0 0 8px alpha(@tertiary, 0.4);
 }
 
-#custom-pacman:hover {
-    background-color: alpha(@surface_container_highest, 0.95);
-    border-color: @tertiary;
-    box-shadow: 0 0 8px alpha(@tertiary, 0.4);
-}
-
-#custom-weather:hover {
-    background-color: alpha(@surface_container_highest, 0.95);
-    border-color: @secondary;
-    box-shadow: 0 0 8px alpha(@secondary, 0.4);
-}
-
 #pulseaudio:hover {
     background-color: alpha(@surface_container_highest, 0.95);
     border-color: @primary;
@@ -170,21 +107,6 @@ tooltip label {
     background-color: alpha(@surface_container_highest, 0.95);
     border-color: @tertiary;
     box-shadow: 0 0 8px alpha(@tertiary, 0.4);
-}
-
-#custom-notification:hover {
-    background-color: alpha(@surface_container_highest, 0.95);
-    border-color: @secondary;
-    box-shadow: 0 0 8px alpha(@secondary, 0.4);
-}
-
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#idle-inhibitor:hover,
-#custom-vpn:hover {
-    background-color: alpha(@surface_container_highest, 0.95);
-    border-color: alpha(@outline, 0.7);
 }
 
 #workspaces {
