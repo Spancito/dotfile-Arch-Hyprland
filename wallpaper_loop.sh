@@ -4,58 +4,54 @@ DIR="$HOME/.config/wallpapers/Pictures/Wallpapers"
 INTERVAL=3600
 
 if [ -e "$LOCKFILE" ]; then
-    OLD_PID=$(cat "$LOCKFILE" 2>/dev/null)
-    if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
-        exit 0
-    fi
+  OLD_PID=$(cat "$LOCKFILE" 2>/dev/null)
+  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
+    exit 0
+  fi
 fi
 
-echo $$ > "$LOCKFILE"
+echo $$ >"$LOCKFILE"
 trap 'rm -f "$LOCKFILE"; exit 0' EXIT TERM INT
 
 while true; do
-    archivo=$(find "$DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.webm" \) | shuf -n 1)
+  archivo=$(find "$DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.webm" \) | shuf -n 1)
 
-    if [ -n "$archivo" ]; then
-        extension="${archivo##*.}"
-        extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
+  if [ -n "$archivo" ]; then
+    extension="${archivo##*.}"
+    extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
 
-        if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
-            OLD_PIDS=$(pgrep -x swaybg)
-            OLD_VIDS=$(pgrep -x mpvpaper)
-            
-            swaybg -i "$archivo" -m fill >/dev/null 2>&1 &
-            matugen image -t scheme-fidelity "$archivo" >/dev/null 2>&1 &
-            
-            sleep 0.3
-            
-            [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
-            [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
-        elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
-            OLD_PIDS=$(pgrep -x swaybg)
-            OLD_VIDS=$(pgrep -x mpvpaper)
-            
-            mpvpaper -o "no-audio loop" "*" "$archivo" >/dev/null 2>&1 &
-            
-            filename=$(basename -- "$archivo")
-            THUMB_DIR="$HOME/.cache/wallpaper_thumbs"
-            mkdir -p "$THUMB_DIR"
-            THUMB_PATH="$THUMB_DIR/${filename}.png"
-            
-            if [ ! -f "$THUMB_PATH" ]; then
-                ffmpeg -y -v error -ss 00:00:02 -i "$archivo" -vframes 1 -update 1 "$THUMB_PATH"
-            fi
-            
-            matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
-            
-            sleep 0.3
-            
-            [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
-            [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
-        fi
-        
-        echo "$archivo" > /tmp/current_wallpaper_path
+    if [[ "$extension" =~ ^(png|jpg|jpeg|webp)$ ]]; then
+      OLD_PIDS=$(pgrep -x swaybg)
+      OLD_VIDS=$(pgrep -x mpvpaper)
+
+      swaybg -i "$archivo" -m fill >/dev/null 2>&1 &
+      matugen image -t scheme-fidelity "$archivo" >/dev/null 2>&1 &
+
+      [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+      [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
+    elif [[ "$extension" =~ ^(mp4|mkv|webm)$ ]]; then
+      OLD_PIDS=$(pgrep -x swaybg)
+      OLD_VIDS=$(pgrep -x mpvpaper)
+
+      mpvpaper -o "no-audio loop" "*" "$archivo" >/dev/null 2>&1 &
+
+      filename=$(basename -- "$archivo")
+      THUMB_DIR="$HOME/.cache/wallpaper_thumbs"
+      mkdir -p "$THUMB_DIR"
+      THUMB_PATH="$THUMB_DIR/${filename}.png"
+
+      if [ ! -f "$THUMB_PATH" ]; then
+        ffmpeg -y -v error -ss 00:00:02 -i "$archivo" -vframes 1 -update 1 "$THUMB_PATH"
+      fi
+
+      matugen image -t scheme-fidelity "$THUMB_PATH" >/dev/null 2>&1 &
+
+      [ -n "$OLD_PIDS" ] && echo "$OLD_PIDS" | xargs -r kill 2>/dev/null
+      [ -n "$OLD_VIDS" ] && echo "$OLD_VIDS" | xargs -r kill 2>/dev/null
     fi
-    sleep $INTERVAL &
-    wait $!
+
+    echo "$archivo" >/tmp/current_wallpaper_path
+  fi
+  sleep $INTERVAL &
+  wait $!
 done

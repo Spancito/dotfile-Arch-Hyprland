@@ -1,27 +1,31 @@
+* {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
 window#miniplayer {
     background: transparent;
 }
 
 #main-box {
-    background-color: alpha(#181211, 0.85);
-    border: 2px solid #ffb3af;
+    background-color: alpha(#191117, 0.85);
+    border: 2px solid #fface8;
     border-radius: 16px;
 }
 
 #app-icon {
     font-size: 48px;
-    color: #ffb3af;
+    color: #fface8;
 }
 
 #title {
-    color: #eedfde;
+    color: #efdee7;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 2px;
 }
 
 #artist {
-    color: #d9c1bf;
+    color: #d8c0ce;
     font-size: 13px;
     margin-bottom: 8px;
 }
@@ -30,7 +34,7 @@ button {
     background: transparent;
     border: none;
     box-shadow: none;
-    color: #ffb3af;
+    color: #fface8;
     font-size: 22px;
     padding: 6px;
     border-radius: 50%;
@@ -39,11 +43,11 @@ button {
 }
 
 button:hover {
-    background: alpha(#ffb3af, 0.2);
+    background: alpha(#fface8, 0.2);
 }
 
 button:active {
-    background: alpha(#ffb3af, 0.4);
+    background: alpha(#fface8, 0.4);
 }
 
 #cover {
@@ -51,24 +55,24 @@ button:active {
 }
 
 progressbar > trough {
-    background-color: alpha(#ffb3af, 0.2);
+    background-color: alpha(#fface8, 0.2);
     border-radius: 8px;
     min-height: 8px;
 }
 
 progressbar > trough > progress {
-    background-color: #ffb3af;
+    background-color: #fface8;
     border-radius: 8px;
 }
 
 #progress-label {
-    color: #ffb3af;
+    color: #fface8;
     font-size: 16px;
     letter-spacing: -2px;
 }
 
 #time-label {
-    color: #d9c1bf;
+    color: #d8c0ce;
     font-size: 13px;
     font-family: monospace;
     font-weight: bold;
@@ -79,28 +83,28 @@ window#taskswidget {
 }
 
 #tasks-main-box {
-    background-color: alpha(#181211, 0.85);
-    border: 2px solid #ffb3af;
+    background-color: alpha(#191117, 0.85);
+    border: 2px solid #fface8;
     border-radius: 16px;
     padding: 14px;
 }
 
 #task-search-entry {
-    background-color: alpha(#3b3332, 0.6);
-    color: #eedfde;
-    border: 1px solid alpha(#a18c8a, 0.4);
+    background-color: alpha(#3c3238, 0.6);
+    color: #efdee7;
+    border: 1px solid alpha(#a08b97, 0.4);
     border-radius: 10px;
     padding: 6px 12px;
     font-size: 14px;
 }
 
 #task-search-entry:focus {
-    border-color: #ffb3af;
+    border-color: #fface8;
 }
 
 #task-add-btn {
-    background-color: alpha(#ffb3af, 0.2);
-    color: #ffb3af;
+    background-color: alpha(#fface8, 0.2);
+    color: #fface8;
     border-radius: 10px;
     font-size: 18px;
     min-width: 38px;
@@ -109,8 +113,8 @@ window#taskswidget {
 }
 
 #task-add-btn:hover {
-    background-color: #ffb3af;
-    color: #571d1d;
+    background-color: #fface8;
+    color: #5e0053;
 }
 
 #tasks-list {
@@ -118,7 +122,7 @@ window#taskswidget {
 }
 
 .task-row {
-    background-color: alpha(#251e1d, 0.4);
+    background-color: alpha(#261d23, 0.4);
     border-radius: 10px;
     padding: 6px 10px;
     margin-bottom: 4px;
@@ -126,22 +130,22 @@ window#taskswidget {
 }
 
 .task-row:hover {
-    background-color: alpha(#3b3332, 0.8);
+    background-color: alpha(#3c3238, 0.8);
 }
 
 .task-title {
-    color: #eedfde;
+    color: #efdee7;
     font-size: 14px;
     font-weight: bold;
 }
 
 .task-desc {
-    color: #d9c1bf;
+    color: #d8c0ce;
     font-size: 12px;
 }
 
 .task-action-btn {
-    color: #ffb3af;
+    color: #fface8;
     font-size: 14px;
     min-width: 28px;
     min-height: 28px;
@@ -149,7 +153,7 @@ window#taskswidget {
 }
 
 .task-action-btn:hover {
-    background-color: alpha(#ffb3af, 0.2);
+    background-color: alpha(#fface8, 0.2);
 }
 
 .task-delete-btn {
@@ -165,29 +169,29 @@ window#taskswidget {
 }
 
 .task-edit-box {
-    background-color: alpha(#302828, 0.7);
-    border: 1px solid alpha(#ffb3af, 0.5);
+    background-color: alpha(#31272e, 0.7);
+    border: 1px solid alpha(#fface8, 0.5);
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 6px;
 }
 
 .task-edit-entry {
-    background-color: alpha(#3b3332, 0.6);
-    color: #eedfde;
-    border: 1px solid alpha(#a18c8a, 0.3);
+    background-color: alpha(#3c3238, 0.6);
+    color: #efdee7;
+    border: 1px solid alpha(#a08b97, 0.3);
     border-radius: 8px;
     padding: 4px 8px;
     font-size: 13px;
 }
 
 .task-edit-entry:focus {
-    border-color: #ffb3af;
+    border-color: #fface8;
 }
 
 .task-save-btn {
-    background-color: #ffb3af;
-    color: #571d1d;
+    background-color: #fface8;
+    color: #5e0053;
     border-radius: 8px;
     font-size: 12px;
     font-weight: bold;
@@ -196,12 +200,12 @@ window#taskswidget {
 }
 
 .task-save-btn:hover {
-    background-color: alpha(#ffb3af, 0.8);
+    background-color: alpha(#fface8, 0.8);
 }
 
 .task-cancel-btn {
-    background-color: alpha(#534342, 0.4);
-    color: #d9c1bf;
+    background-color: alpha(#53424d, 0.4);
+    color: #d8c0ce;
     border-radius: 8px;
     font-size: 12px;
     padding: 4px 10px;
@@ -209,5 +213,5 @@ window#taskswidget {
 }
 
 .task-cancel-btn:hover {
-    background-color: alpha(#534342, 0.8);
+    background-color: alpha(#53424d, 0.8);
 }
