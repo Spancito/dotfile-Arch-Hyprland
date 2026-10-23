@@ -3,7 +3,7 @@
   "logo": {
     "type": "builtin",
     "source": "arch",
-    "color": {"1": "#fface8", "2": "#f5b2e1"},
+    "color": {"1": "#efb0ff", "2": "#e1b9e9"},
     "padding": {
       "top": 1,
       "left": 2,
@@ -13,9 +13,9 @@
   "display": {
     "separator": " 󰁕 ",
     "color": {
-      "keys": "#fface8",
-      "title": "#fface8",
-      "separator": "#9cd84c"
+      "keys": "#efb0ff",
+      "title": "#efb0ff",
+      "separator": "#c5ce52"
     }
   },
   "modules": [
@@ -23,73 +23,73 @@
     {
       "type": "title",
       "color": {
-        "user": "#fface8",
-        "at": "#a08b97",
-        "host": "#f5b2e1"
+        "user": "#efb0ff",
+        "at": "#9a8c9b",
+        "host": "#e1b9e9"
       }
     },
     {
       "type": "custom",
       "format": "────────────────────────────────────────",
-      "outputColor": "#53424d"
+      "outputColor": "#4e4350"
     },
     "break",
     {
       "type": "os",
       "key": "╭─  OS",
-      "keyColor": "#fface8"
+      "keyColor": "#efb0ff"
     },
     {
       "type": "host",
       "key": "├─ 󰌢 PC",
-      "keyColor": "#fface8"
+      "keyColor": "#efb0ff"
     },
     {
       "type": "kernel",
       "key": "├─  Kernel",
-      "keyColor": "#fface8"
+      "keyColor": "#efb0ff"
     },
     {
       "type": "uptime",
       "key": "╰─ 󰅐 Uptime",
-      "keyColor": "#fface8"
+      "keyColor": "#efb0ff"
     },
     "break",
     {
       "type": "packages",
       "key": "╭─ 󰏖 Packages",
-      "keyColor": "#f5b2e1"
+      "keyColor": "#e1b9e9"
     },
     {
       "type": "shell",
       "key": "├─  Shell",
-      "keyColor": "#f5b2e1"
+      "keyColor": "#e1b9e9"
     },
     {
       "type": "wm",
       "key": "├─  WM",
-      "keyColor": "#f5b2e1"
+      "keyColor": "#e1b9e9"
     },
     {
       "type": "terminal",
       "key": "╰─  Terminal",
-      "keyColor": "#f5b2e1"
+      "keyColor": "#e1b9e9"
     },
     "break",
     {
       "type": "cpu",
       "key": "╭─  CPU",
-      "keyColor": "#9cd84c"
+      "keyColor": "#c5ce52"
     },
     {
       "type": "gpu",
       "key": "├─ 󰢮 GPU",
-      "keyColor": "#9cd84c"
+      "keyColor": "#c5ce52"
     },
     {
       "type": "memory",
       "key": "╰─  Memory",
-      "keyColor": "#9cd84c"
+      "keyColor": "#c5ce52"
     },
     "break"
   ]

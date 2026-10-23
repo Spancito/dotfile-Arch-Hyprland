@@ -1,106 +1,106 @@
 local M = {}
 
-M.image = "/home/spancito/.cache/wallpaper_thumbs/bongo-cat-neon-moewalls-com.mp4.png"
+M.image = "/home/spancito/.config/wallpapers/Pictures/Wallpapers/darcula.png"
 
-M.background = "rgba(191117ff)"
+M.background = "rgba(171218ff)"
 
 M.error = "rgba(ffb4abff)"
 
 M.error_container = "rgba(93000aff)"
 
-M.inverse_on_surface = "rgba(382d34ff)"
+M.inverse_on_surface = "rgba(352e35ff)"
 
-M.inverse_primary = "rgba(a02c8eff)"
+M.inverse_primary = "rgba(893ca4ff)"
 
-M.inverse_surface = "rgba(efdee7ff)"
+M.inverse_surface = "rgba(ebdfe9ff)"
 
-M.on_background = "rgba(efdee7ff)"
+M.on_background = "rgba(ebdfe9ff)"
 
 M.on_error = "rgba(690005ff)"
 
 M.on_error_container = "rgba(ffdad6ff)"
 
-M.on_primary = "rgba(5e0053ff)"
+M.on_primary = "rgba(53006eff)"
 
 M.on_primary_container = "rgba(000000ff)"
 
-M.on_primary_fixed = "rgba(3a0033ff)"
+M.on_primary_fixed = "rgba(330045ff)"
 
-M.on_primary_fixed_variant = "rgba(820974ff)"
+M.on_primary_fixed_variant = "rgba(6f218aff)"
 
-M.on_secondary = "rgba(4e1e45ff)"
+M.on_secondary = "rgba(42254bff)"
 
-M.on_secondary_container = "rgba(ffd9f1ff)"
+M.on_secondary_container = "rgba(f9d4ffff)"
 
-M.on_secondary_fixed = "rgba(35082eff)"
+M.on_secondary_fixed = "rgba(2b0f35ff)"
 
-M.on_secondary_fixed_variant = "rgba(68355cff)"
+M.on_secondary_fixed_variant = "rgba(5a3b63ff)"
 
-M.on_surface = "rgba(efdee7ff)"
+M.on_surface = "rgba(ebdfe9ff)"
 
-M.on_surface_variant = "rgba(d8c0ceff)"
+M.on_surface_variant = "rgba(d2c2d1ff)"
 
-M.on_tertiary = "rgba(203600ff)"
+M.on_tertiary = "rgba(2f3300ff)"
 
 M.on_tertiary_container = "rgba(000000ff)"
 
-M.on_tertiary_fixed = "rgba(112000ff)"
+M.on_tertiary_fixed = "rgba(1b1d00ff)"
 
-M.on_tertiary_fixed_variant = "rgba(304f00ff)"
+M.on_tertiary_fixed_variant = "rgba(464a00ff)"
 
-M.outline = "rgba(a08b97ff)"
+M.outline = "rgba(9a8c9bff)"
 
-M.outline_variant = "rgba(53424dff)"
+M.outline_variant = "rgba(4e4350ff)"
 
-M.primary = "rgba(fface8ff)"
+M.primary = "rgba(efb0ffff)"
 
-M.primary_container = "rgba(dd62c5ff)"
+M.primary_container = "rgba(c170dbff)"
 
-M.primary_fixed = "rgba(ffd7f0ff)"
+M.primary_fixed = "rgba(fad7ffff)"
 
-M.primary_fixed_dim = "rgba(fface8ff)"
+M.primary_fixed_dim = "rgba(efb0ffff)"
 
 M.scrim = "rgba(000000ff)"
 
-M.secondary = "rgba(f5b2e1ff)"
+M.secondary = "rgba(e1b9e9ff)"
 
-M.secondary_container = "rgba(6b375fff)"
+M.secondary_container = "rgba(5a3b63ff)"
 
-M.secondary_fixed = "rgba(ffd7f0ff)"
+M.secondary_fixed = "rgba(fad7ffff)"
 
-M.secondary_fixed_dim = "rgba(f5b2e1ff)"
+M.secondary_fixed_dim = "rgba(e1b9e9ff)"
 
 M.shadow = "rgba(000000ff)"
 
-M.source_color = "rgba(d158baff)"
+M.source_color = "rgba(ab5cc5ff)"
 
-M.surface = "rgba(191117ff)"
+M.surface = "rgba(171218ff)"
 
-M.surface_bright = "rgba(41363dff)"
+M.surface_bright = "rgba(3e373eff)"
 
-M.surface_container = "rgba(261d23ff)"
+M.surface_container = "rgba(241e24ff)"
 
-M.surface_container_high = "rgba(31272eff)"
+M.surface_container_high = "rgba(2e282fff)"
 
-M.surface_container_highest = "rgba(3c3238ff)"
+M.surface_container_highest = "rgba(39333aff)"
 
-M.surface_container_low = "rgba(22191fff)"
+M.surface_container_low = "rgba(201a20ff)"
 
-M.surface_container_lowest = "rgba(140c11ff)"
+M.surface_container_lowest = "rgba(120c13ff)"
 
-M.surface_dim = "rgba(191117ff)"
+M.surface_dim = "rgba(171218ff)"
 
-M.surface_tint = "rgba(fface8ff)"
+M.surface_tint = "rgba(efb0ffff)"
 
-M.surface_variant = "rgba(53424dff)"
+M.surface_variant = "rgba(4e4350ff)"
 
-M.tertiary = "rgba(9cd84cff)"
+M.tertiary = "rgba(c5ce52ff)"
 
-M.tertiary_container = "rgba(69a013ff)"
+M.tertiary_container = "rgba(8f971eff)"
 
-M.tertiary_fixed = "rgba(b7f565ff)"
+M.tertiary_fixed = "rgba(e1eb6bff)"
 
-M.tertiary_fixed_dim = "rgba(9cd84cff)"
+M.tertiary_fixed_dim = "rgba(c5ce52ff)"
 
 
 return M
