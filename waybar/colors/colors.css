@@ -1,114 +1,114 @@
 
-@define-color background #171210;
+@define-color background #131315;
 
 @define-color error #ffb4ab;
 
 @define-color error_container #93000a;
 
-@define-color inverse_on_surface #352f2c;
+@define-color inverse_on_surface #303032;
 
-@define-color inverse_primary #865138;
+@define-color inverse_primary #565e75;
 
-@define-color inverse_surface #ece0dc;
+@define-color inverse_surface #e4e2e4;
 
-@define-color on_background #ece0dc;
+@define-color on_background #e4e2e4;
 
 @define-color on_error #690005;
 
 @define-color on_error_container #ffdad6;
 
-@define-color on_primary #4f250f;
+@define-color on_primary #283045;
 
-@define-color on_primary_container #300e00;
+@define-color on_primary_container #000000;
 
-@define-color on_primary_fixed #341100;
+@define-color on_primary_fixed #131b2f;
 
-@define-color on_primary_fixed_variant #6a3a23;
+@define-color on_primary_fixed_variant #3e465c;
 
-@define-color on_secondary #422b20;
+@define-color on_secondary #2d3039;
 
-@define-color on_secondary_container #ffddcf;
+@define-color on_secondary_container #dedfeb;
 
-@define-color on_secondary_fixed #2a170d;
+@define-color on_secondary_fixed #181b24;
 
-@define-color on_secondary_fixed_variant #5a4135;
+@define-color on_secondary_fixed_variant #444650;
 
-@define-color on_surface #ece0dc;
+@define-color on_surface #e4e2e4;
 
-@define-color on_surface_variant #d7c2ba;
+@define-color on_surface_variant #c6c6cd;
 
-@define-color on_tertiary #003738;
+@define-color on_tertiary #3d2e11;
 
-@define-color on_tertiary_container #001d1d;
+@define-color on_tertiary_container #000000;
 
-@define-color on_tertiary_fixed #002020;
+@define-color on_tertiary_fixed #261901;
 
-@define-color on_tertiary_fixed_variant #044f51;
+@define-color on_tertiary_fixed_variant #554425;
 
-@define-color outline #9f8d86;
+@define-color outline #909097;
 
-@define-color outline_variant #52443e;
+@define-color outline_variant #45464d;
 
-@define-color primary #fcb797;
+@define-color primary #bec6e0;
 
-@define-color primary_container #d59577;
+@define-color primary_container #8890a9;
 
-@define-color primary_fixed #ffdbcc;
+@define-color primary_fixed #dae2fd;
 
-@define-color primary_fixed_dim #fcb797;
+@define-color primary_fixed_dim #bec6e0;
 
 @define-color scrim #000000;
 
-@define-color secondary #e3bfaf;
+@define-color secondary #c4c6d1;
 
-@define-color secondary_container #5d4337;
+@define-color secondary_container #444650;
 
-@define-color secondary_fixed #ffdbcc;
+@define-color secondary_fixed #e0e2ee;
 
-@define-color secondary_fixed_dim #e3bfaf;
+@define-color secondary_fixed_dim #c4c6d1;
 
 @define-color shadow #000000;
 
-@define-color source_color #d59577;
+@define-color source_color #798199;
 
-@define-color surface #171210;
+@define-color surface #131315;
 
-@define-color surface_bright #3e3835;
+@define-color surface_bright #39393b;
 
-@define-color surface_container #241e1c;
+@define-color surface_container #1f1f21;
 
-@define-color surface_container_high #2f2926;
+@define-color surface_container_high #2a2a2b;
 
-@define-color surface_container_highest #3a3331;
+@define-color surface_container_highest #353436;
 
-@define-color surface_container_low #201a18;
+@define-color surface_container_low #1b1b1d;
 
-@define-color surface_container_lowest #120d0b;
+@define-color surface_container_lowest #0e0e10;
 
-@define-color surface_dim #171210;
+@define-color surface_dim #131315;
 
-@define-color surface_tint #fcb797;
+@define-color surface_tint #bec6e0;
 
-@define-color surface_variant #52443e;
+@define-color surface_variant #45464d;
 
-@define-color tertiary #556d8b;
+@define-color tertiary #dcc39b;
 
-@define-color tertiary_container #556d8b;
+@define-color tertiary_container #a48e69;
 
-@define-color tertiary_fixed #b0eeee;
+@define-color tertiary_fixed #f9dfb5;
 
-@define-color tertiary_fixed_dim #94d1d2;
+@define-color tertiary_fixed_dim #dcc39b;
 
 
 #custom-cava {
-    color: #fcb797;
+    color: #bec6e0;
     margin-right: 8px;
 }
 
 #custom-cava {
     padding-right: 2px;
     margin-right: 0px;
-    color: #fcb797;
+    color: #bec6e0;
 }
 
 #custom-media {

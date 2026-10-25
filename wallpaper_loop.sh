@@ -20,7 +20,7 @@ while true; do
   archivo=$(find "$DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) | shuf -n 1)
 
   if [ -n "$archivo" ]; then
-    awww img "$archivo" --transition-type wipe --transition-angle 30 --transition-step 90 --transition-duration 1.5 >/dev/null 2>&1
+    awww img "$archivo" --transition-type any --transition-angle 30 --transition-step 90 --transition-duration 1.5 >/dev/null 2>&1
     python3 "$HOME/.config/apply_theme.py" "$archivo" >/dev/null 2>&1 &
     echo "$archivo" >/tmp/current_wallpaper_path
   fi

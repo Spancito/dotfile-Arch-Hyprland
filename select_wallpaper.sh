@@ -15,7 +15,7 @@ SELECTED=$(echo -en "$ROFI_INPUT" | rofi -dmenu -i -theme "$HOME/.config/rofi/th
 if [ -n "$SELECTED" ]; then
   FULL_PATH="$WALL_DIR/$SELECTED"
   if [ -f "$FULL_PATH" ]; then
-    awww img "$FULL_PATH" --transition-type wipe --transition-angle 30 --transition-step 90 --transition-duration 1.5 >/dev/null 2>&1
+    awww img "$FULL_PATH" --transition-type any --transition-angle 30 --transition-step 90 --transition-duration 1.5 >/dev/null 2>&1
     python3 "$HOME/.config/apply_theme.py" "$FULL_PATH" >/dev/null 2>&1 &
     echo "$FULL_PATH" >/tmp/current_wallpaper_path
   fi

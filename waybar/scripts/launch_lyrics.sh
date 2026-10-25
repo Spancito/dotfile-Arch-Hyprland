@@ -1,2 +1,2 @@
 #!/bin/bash
-kitty --class sptlrx -o background_opacity=0 -o foreground="#fcb797" -o window_padding_width=15 -e sptlrx -p mpris
+kitty --class sptlrx -o background_opacity=0 -o foreground="#bec6e0" -o window_padding_width=15 -e sptlrx -p mpris
