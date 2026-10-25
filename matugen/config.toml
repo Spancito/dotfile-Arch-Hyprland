@@ -49,12 +49,12 @@ output_path = '~/.config/gtk-3.0/gtk.css'
 [templates.papirus]
 input_path = '~/.config/matugen/templates/papirus_color.sh'
 output_path = '~/.config/matugen/scripts/run_papirus.sh'
-post_hook = 'bash ~/.config/matugen/scripts/run_papirus.sh'
+post_hook = 'bash ~/.config/matugen/scripts/run_papirus.sh >/dev/null 2>&1 &'
 
 [templates.hyprcursor]
 input_path = '~/.config/matugen/templates/hyprcursor_color.sh'
 output_path = '~/.config/matugen/scripts/run_hyprcursor.sh'
-post_hook = 'bash ~/.config/matugen/scripts/run_hyprcursor.sh'
+post_hook = 'bash ~/.config/matugen/scripts/run_hyprcursor.sh >/dev/null 2>&1 &'
 
 [templates.fastfetch]
 input_path = '~/.config/matugen/templates/fastfetch.jsonc'

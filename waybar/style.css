@@ -9,7 +9,6 @@
     font-size: 1.1rem;
     min-height: 0;
     border-radius: 50px;
-    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
 window#waybar {
@@ -48,7 +47,6 @@ tooltip label {
         inset 0 -1px 0 rgba(0, 0, 0, 0.2);
     margin-right: 10px;
     padding: 0px 10px;
-    transition: all 0.4s ease;
 }
 
 #custom-launcher {
@@ -118,15 +116,21 @@ tooltip label {
 #workspaces button {
     padding: 0px 6px;
     margin: 0px 3px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.2s ease, min-width 0.2s ease, box-shadow 0.2s ease;
     border-radius: 10px;
     color: @secondary;
 }
 
 #workspaces button:hover {
     background-color: alpha(@surface_container_highest, 0.95);
-    color: @tertiary;
+    color: @secondary;
     min-width: 45px;
+}
+
+#workspaces button.visible,
+#workspaces button.empty,
+#workspaces button.persistent {
+    color: @secondary;
 }
 
 #workspaces button.active {
