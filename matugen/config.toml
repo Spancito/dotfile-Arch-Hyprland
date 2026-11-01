@@ -75,3 +75,8 @@ output_path = '~/.config/waybar/scripts/launch_lyrics.sh'
 [templates.nvim]
 input_path = '~/.config/matugen/templates/nvim-colors.lua'
 output_path = '~/.config/nvim/colors/matugen.lua'
+
+[templates.quickshell]
+input_path = '~/.config/matugen/templates/quickshell-colors.json'
+output_path = '~/.config/quickshell/colors.json'
+

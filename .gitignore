@@ -1,8 +1,6 @@
 *
 
 !.gitignore
-!dunst/
-!dunst/**
 !ejemplos/
 !ejemplos/**
 !fastfetch/
@@ -23,12 +21,9 @@
 !sptlrx/
 !wallpapers/
 !wallpapers/**
-!waybar/
-!waybar/**
-!wallpaper_loop.sh
+!quickshell/
+!quickshell/*
 !README.md
-!restart_wallpaper.sh
-!select_wallpaper.sh
 !temasVarios/
 !temasVarios/**
 !Afterglow-Cursors-src/
