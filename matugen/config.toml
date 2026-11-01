@@ -7,19 +7,9 @@ input_path = '~/.config/hypr/colors/matugen.lua'
 output_path = '~/.config/hypr/colors/colors.lua'
 post_hook = 'hyprctl reload'
 
-[templates.waybar]
-input_path = '~/.config/waybar/colors/matugen.css'
-output_path = '~/.config/waybar/colors/colors.css'
-post_hook = 'killall -SIGUSR2 waybar'
-
 [templates.hyprland-conf]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors/matugen.conf'
-
-[templates.dunst]
-input_path = '~/.config/matugen/templates/dunstrc'
-output_path = '~/.config/dunst/dunstrc'
-post_hook = 'bash -c "dunstctl reload 2>/dev/null || { killall -9 dunst 2>/dev/null; dunst & }"'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
@@ -60,17 +50,9 @@ post_hook = 'bash ~/.config/matugen/scripts/run_hyprcursor.sh >/dev/null 2>&1 &'
 input_path = '~/.config/matugen/templates/fastfetch.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
 
-[templates.miniplayer]
-input_path = '~/.config/matugen/templates/miniplayer.css'
-output_path = '~/.config/waybar/miniplayer.css'
-
 [templates.spicetify]
 input_path = '~/.config/matugen/templates/spicetify-colors.css'
 output_path = '~/.config/spicetify/Themes/Matugen/colors.css'
-
-[templates.lyrics_launcher]
-input_path = '~/.config/matugen/templates/launch_lyrics.sh'
-output_path = '~/.config/waybar/scripts/launch_lyrics.sh'
 
 [templates.nvim]
 input_path = '~/.config/matugen/templates/nvim-colors.lua'

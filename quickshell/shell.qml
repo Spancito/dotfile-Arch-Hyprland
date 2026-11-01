@@ -70,6 +70,7 @@ ShellRoot {
                   "  python3 " + Quickshell.env("HOME") + "/.config/apply_theme.py \"$archivo\"; " +
                   "  echo \"$archivo\" > /tmp/current_wallpaper_path; " +
                   "fi";
+        randomWallpaperProc.running = false;
         randomWallpaperProc.command = ["bash", "-c", cmd];
         randomWallpaperProc.running = true;
     }

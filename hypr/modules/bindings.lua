@@ -6,7 +6,7 @@ local minecraft		= "prismlauncher"
 local coding		= "zeditor"
 local music 		= "spotify"
 local capturas		= "flameshot gui"
-local wallpaperAleatorio	= "$HOME/.config/restart_wallpaper.sh &"
+local wallpaperAleatorio	= "quickshell ipc call wallpaper nextRandom"
 local selectWallpaper = "quickshell ipc call wallpaper toggle"
 
 hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal))

@@ -41,6 +41,7 @@ print(json.dumps(colors))
     }
 
     function reload() {
+        if (colorReader.running) colorReader.running = false;
         colorReader.running = true;
     }
 
