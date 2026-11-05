@@ -14,7 +14,7 @@ NATIVE_PKGS=(
   git-lfs glfw grim gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good
   gst-plugins-ugly hyprland kitty lutris man-pages
   matugen meld neovim noto-fonts obs-studio opencode pipewire-jack plocate
-  prismlauncher pv python qt5-wayland qt6-wayland ripgrep rofi
+  prismlauncher pv python qt5-wayland qt6-wayland quickshell ripgrep rofi
   slurp snapper thunar ttf-meslo-nerd unrar upower vim
   vlc-plugins-all wireplumber wl-clipboard wtype xdg-desktop-portal-hyprland
   zed xorg-xcursorgen

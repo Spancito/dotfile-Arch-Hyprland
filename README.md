@@ -30,9 +30,6 @@
     <br/>
     <br/>
     <img src="ejemplos/3.png" alt="Captura 3" width="800" />
-    <br/>
-    <br/>
-    <img src="ejemplos/4.png" alt="Captura 4" width="800" />
 </div> 
 
 
