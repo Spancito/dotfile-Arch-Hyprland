@@ -1,2 +1,2 @@
 #!/bin/bash
-python ~/.config/matugen/scripts/update_papirus.py "#bac9d2"
+python ~/.config/matugen/scripts/update_papirus.py "#ffb4ab"

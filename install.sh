@@ -27,7 +27,6 @@ AUR_PKGS=(
   antigravity
   bottles
   brave-bin
-  github-desktop-bin
   heroic-games-launcher
   jdk
   proton-cachyos-native
