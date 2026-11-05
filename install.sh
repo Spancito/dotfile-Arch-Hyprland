@@ -27,6 +27,7 @@ AUR_PKGS=(
   antigravity
   bottles
   brave-bin
+  github-desktop-bin
   heroic-games-launcher
   jdk
   proton-cachyos-native
@@ -38,6 +39,7 @@ AUR_PKGS=(
   vesktop
   papirus-icon-theme
   papirus-folders-git
+  zen-browser-bin
 )
 
 yay -S --needed --noconfirm "${AUR_PKGS[@]}"
