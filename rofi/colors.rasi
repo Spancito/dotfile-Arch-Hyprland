@@ -1,27 +1,27 @@
 * {
-    primary: #7ed8b7;
-    secondary: #abcebe;
-    tertiary: #ffb4ab;
+    primary: #bbc8d7;
+    secondary: #c3c7cd;
+    tertiary: #e1c0ac;
     error: #ffb4ab;
 
-    surface: #101412;
-    surface-container: #1c211e;
-    surface-container-highest: #313633;
+    surface: #131314;
+    surface-container: #1f2020;
+    surface-container-highest: #353536;
 
-    on-surface: #dfe4df;
-    on-surface-variant: #bdc9c2;
-    outline: #88938d;
+    on-surface: #e4e2e3;
+    on-surface-variant: #c4c6cc;
+    outline: #8e9196;
 
-    bg0: #101412;
-    bg0-transparent: #101412B3;
-    bg1: #181d1a;
-    bg2: #1c211e;
-    bg2-transparent: #1c211eB3;
-    bg3: #313633;
-    bg4: #353a38;
-    text: #dfe4df;
+    bg0: #131314;
+    bg0-transparent: #131314B3;
+    bg1: #1b1b1c;
+    bg2: #1f2020;
+    bg2-transparent: #1f2020B3;
+    bg3: #353536;
+    bg4: #39393a;
+    text: #e4e2e3;
     red: #ffb4ab;
-    green: #ffb4ab;
-    blue: #7ed8b7;
-    grey1: #bdc9c2;
+    green: #e1c0ac;
+    blue: #bbc8d7;
+    grey1: #c4c6cc;
 }
