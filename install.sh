@@ -9,10 +9,10 @@ sudo pacman -Syu --noconfirm
 
 echo "[2/3] Instalando paquetes nativos..."
 NATIVE_PKGS=(
-  aria2 awww bind cava code cpupower egl-wayland f2fs-tools
+  aria2 awww bind cava code cpupower deepfilternet-ladspa easyeffects egl-wayland f2fs-tools
   fastfetch fd ffmpegthumbnailer flameshot flatpak gamemode gamescope gemini-cli git
   git-lfs glfw grim gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good
-  gst-plugins-ugly hyprland kitty lutris man-pages
+  gst-plugins-ugly hyprland kitty lsp-plugins-lv2 lutris man-pages
   matugen meld neovim noto-fonts obs-studio opencode pipewire-jack plocate
   prismlauncher pv python qt5-wayland qt6-wayland quickshell ripgrep rofi
   slurp snapper thunar ttf-meslo-nerd unrar upower vim
