@@ -1,3 +1,6 @@
+[EffectsPipelines]
+bypass=true
+
 [StreamInputs]
 inputDevice=alsa_input.pci-0000_09_00.4.analog-stereo
 plugins=deepfilternet#0,gate#0,compressor#0
@@ -11,4 +14,4 @@ outputDevice=alsa_output.pci-0000_09_00.4.analog-stereo
 autostartOnLogin=true
 height=720
 visiblePage=inputPage
-width=672
+width=1350

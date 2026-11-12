@@ -1,5 +1,4 @@
 hl.on("hyprland.start", function()
-	hl.exec_cmd("easyeffects")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("quickshell &")
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
